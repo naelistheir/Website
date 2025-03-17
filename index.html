@@ -3,210 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLyxx Store - Jual Diamond & Akun Game</title>
-    <style>
-        /* Google Font */
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
-
-        /* Reset & Global Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        body {
-            background-color: #0d0d0d;
-            color: #fff;
-        }
-
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 50px;
-            background: linear-gradient(90deg, #ff3c7d, #7033ff);
-        }
-
-        .navbar h1 {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin: 0 15px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #ffdf00;
-        }
-
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 50px;
-            background: url('https://source.unsplash.com/1600x900/?gaming') no-repeat center center/cover;
-        }
-
-        .hero h2 {
-            font-size: 32px;
-            font-weight: bold;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-
-        .hero .btn {
-            background: #ff3c7d;
-            color: #fff;
-            padding: 10px 20px;
-            margin-top: 10px;
-            text-decoration: none;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .hero .btn:hover {
-            background: #ffdf00;
-            color: #0d0d0d;
-        }
-
-        /* Produk Section */
-        .produk-section {
-            padding: 50px;
-            text-align: center;
-        }
-
-        .produk-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .produk {
-            background: #1c1c1c;
-            padding: 20px;
-            width: 280px;
-            border-radius: 10px;
-            text-align: center;
-            transition: 0.3s;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-        }
-
-        .produk:hover {
-            transform: scale(1.05);
-            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
-        }
-
-        .produk img {
-            width: 100%;
-            border-radius: 10px;
-        }
-
-        .produk h3 {
-            margin: 10px 0;
-            font-size: 20px;
-        }
-
-        .produk p {
-            font-size: 16px;
-            color: #ffdf00;
-        }
-
-        .produk .btn-beli {
-            display: inline-block;
-            background: #ff3c7d;
-            padding: 8px 15px;
-            color: #fff;
-            text-decoration: none;
-            margin-top: 10px;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-
-        .produk .btn-beli:hover {
-            background: #ffdf00;
-            color: #0d0d0d;
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #111;
-            font-size: 14px;
-        }
-
-        .footer a {
-            color: #ff3c7d;
-            text-decoration: none;
-        }
-    </style>
+    <title>iLyxx Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+    <header>
+        <h1 class="logo">iLyxx Store</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produk</a></li>
+                <li><a href="#">Cara Order</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <h1>iLyxx Store</h1>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Top Up</a></li>
-            <li><a href="#">Beli Akun</a></li>
-            <li><a href="#">Jasa Joki</a></li>
-            <li><a href="https://wa.me/6287875962943">WhatsApp</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
     <section class="hero">
-        <h2>Flash Sale Akun & Diamond Game</h2>
-        <p>Dapatkan akun dan diamond favoritmu dengan harga terbaik!</p>
-        <a href="#produk" class="btn">Lihat Produk</a>
-    </section>
-
-    <!-- Produk Section -->
-    <section class="produk-section" id="produk">
-        <h2>Produk Populer</h2>
-        <div class="produk-container">
-            <div class="produk">
-                <img src="https://source.unsplash.com/280x180/?mobile-legends" alt="Diamond ML">
-                <h3>Diamond Mobile Legends</h3>
-                <p>Harga: Rp 50.000</p>
-                <a href="https://wa.me/6287875962943" class="btn-beli">Beli Sekarang</a>
-            </div>
-            <div class="produk">
-                <img src="https://source.unsplash.com/280x180/?freefire" alt="Akun FF">
-                <h3>Akun FF Sultan</h3>
-                <p>Harga: Rp 300.000</p>
-                <a href="https://wa.me/6287875962943" class="btn-beli">Beli Sekarang</a>
-            </div>
+        <div class="hero-content">
+            <h2>Top Up Diamond & Akun Game Termurah</h2>
+            <p>Cepat, Aman, dan Terpercaya</p>
+            <a href="#" class="btn">Beli Sekarang</a>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        &copy; 2025 iLyxx Store | Hubungi kami di WhatsApp: <a href="https://wa.me/6287875962943">6287875962943</a>
+    <footer>
+        <p>© 2025 iLyxx Store | All Rights Reserved</p>
     </footer>
-
 </body>
 </html>
