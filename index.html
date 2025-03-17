@@ -5,154 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iLyxx Store - Jual Diamond & Akun Game</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        /* Reset & Global Styles */
+        * {
             margin: 0;
             padding: 0;
-            background: #0a0a0a;
-            color: white;
+            box-sizing: border-box;
+            font-family: 'Orbitron', sans-serif;
         }
 
-        header {
+        body {
+            background-color: #0d0d0d;
+            color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
-            background: #111;
+            padding: 15px 50px;
+            background: linear-gradient(90deg, #ff3c7d, #7033ff);
         }
 
-        .logo {
+        .navbar h1 {
             font-size: 24px;
             font-weight: bold;
+            letter-spacing: 2px;
         }
 
-        nav ul {
+        .nav-links {
             list-style: none;
             display: flex;
-            gap: 20px;
-            padding: 0;
-            margin: 0;
         }
 
-        nav ul li {
-            display: inline;
+        .nav-links li {
+            margin: 0 15px;
         }
 
-        nav a {
+        .nav-links a {
             text-decoration: none;
-            color: white;
+            color: #fff;
             font-size: 16px;
+            transition: 0.3s;
         }
 
-        .banner {
+        .nav-links a:hover {
+            color: #ffdf00;
+        }
+
+        /* Hero Section */
+        .hero {
             text-align: center;
             padding: 50px;
-            background: linear-gradient(to right, #ff416c, #ff4b2b);
+            background: url('https://source.unsplash.com/1600x900/?gaming') no-repeat center center/cover;
         }
 
-        .kategori {
-            text-align: center;
-            padding: 20px;
+        .hero h2 {
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        .kategori button {
-            margin: 10px;
+        .hero p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .hero .btn {
+            background: #ff3c7d;
+            color: #fff;
             padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            background: #ff4b2b;
-            color: white;
-            font-size: 16px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-size: 18px;
             border-radius: 5px;
+            transition: 0.3s;
         }
 
-        .produk {
-            padding: 30px;
+        .hero .btn:hover {
+            background: #ffdf00;
+            color: #0d0d0d;
+        }
+
+        /* Produk Section */
+        .produk-section {
+            padding: 50px;
             text-align: center;
         }
 
-        .produk-list {
+        .produk-container {
             display: flex;
             justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
-        .produk-item {
-            background: #222;
-            padding: 15px;
-            border-radius: 8px;
+        .produk {
+            background: #1c1c1c;
+            padding: 20px;
+            width: 280px;
+            border-radius: 10px;
             text-align: center;
-            width: 200px;
+            transition: 0.3s;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
         }
 
-        .produk-item img {
+        .produk:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .produk img {
             width: 100%;
-            border-radius: 5px;
+            border-radius: 10px;
         }
 
-        .btn {
+        .produk h3 {
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .produk p {
+            font-size: 16px;
+            color: #ffdf00;
+        }
+
+        .produk .btn-beli {
             display: inline-block;
-            padding: 10px;
-            margin-top: 10px;
-            background: #ff416c;
-            color: white;
+            background: #ff3c7d;
+            padding: 8px 15px;
+            color: #fff;
             text-decoration: none;
+            margin-top: 10px;
             border-radius: 5px;
+            transition: 0.3s;
         }
 
-        footer {
+        .produk .btn-beli:hover {
+            background: #ffdf00;
+            color: #0d0d0d;
+        }
+
+        /* Footer */
+        .footer {
             text-align: center;
             padding: 20px;
             background: #111;
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #ff3c7d;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">iLyxx Store</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Top Up</a></li>
-                <li><a href="#">Beli Akun</a></li>
-                <li><a href="#">Jasa Joki</a></li>
-                <li><a href="https://wa.me/6287875962943" target="_blank">WhatsApp</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>iLyxx Store</h1>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Top Up</a></li>
+            <li><a href="#">Beli Akun</a></li>
+            <li><a href="#">Jasa Joki</a></li>
+            <li><a href="https://wa.me/6287875962943">WhatsApp</a></li>
+        </ul>
+    </nav>
 
-    <section class="banner">
-        <h1>Flash Sale Akun & Diamond Game</h1>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Flash Sale Akun & Diamond Game</h2>
         <p>Dapatkan akun dan diamond favoritmu dengan harga terbaik!</p>
+        <a href="#produk" class="btn">Lihat Produk</a>
     </section>
 
-    <section class="kategori">
-        <button>Top Up</button>
-        <button>Beli Akun</button>
-        <button>Jasa Joki</button>
-    </section>
-
-    <section class="produk">
+    <!-- Produk Section -->
+    <section class="produk-section" id="produk">
         <h2>Produk Populer</h2>
-        <div class="produk-list">
-            <div class="produk-item">
-                <img src="https://via.placeholder.com/150" alt="Produk 1">
+        <div class="produk-container">
+            <div class="produk">
+                <img src="https://source.unsplash.com/280x180/?mobile-legends" alt="Diamond ML">
                 <h3>Diamond Mobile Legends</h3>
                 <p>Harga: Rp 50.000</p>
-                <a href="https://wa.me/6287875962943" class="btn">Beli Sekarang</a>
+                <a href="https://wa.me/6287875962943" class="btn-beli">Beli Sekarang</a>
             </div>
-            <div class="produk-item">
-                <img src="https://via.placeholder.com/150" alt="Produk 2">
+            <div class="produk">
+                <img src="https://source.unsplash.com/280x180/?freefire" alt="Akun FF">
                 <h3>Akun FF Sultan</h3>
                 <p>Harga: Rp 300.000</p>
-                <a href="https://wa.me/6287875962943" class="btn">Beli Sekarang</a>
+                <a href="https://wa.me/6287875962943" class="btn-beli">Beli Sekarang</a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>© 2025 iLyxx Store | Hubungi kami di WhatsApp: <a href="https://wa.me/6287875962943">6287875962943</a></p>
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2025 iLyxx Store | Hubungi kami di WhatsApp: <a href="https://wa.me/6287875962943">6287875962943</a>
     </footer>
 
 </body>
