@@ -1,0 +1,95 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #ff5f6d, #ffc371);
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #222;
+}
+
+/* Sections Styling */
+section {
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Services List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* WhatsApp Icon */
+#contact a img {
+    width: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+#contact a img:hover {
+    transform: scale(1.2);
+}
+
+/* Footer Styling */
+footer {
+    background: #222;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 20px;
+}
