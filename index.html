@@ -3,59 +3,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLyxx Store - Jual Akun, Joki, dan Top Up Game</title>
-    <link rel="stylesheet" href="style.css">
+    <title>iLyxx Store - Jual Diamond & Akun Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a;
+            color: white;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: #111;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 50px;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+        }
+
+        .kategori {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .kategori button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            background: #ff4b2b;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .produk {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .produk-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .produk-item {
+            background: #222;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .produk-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px;
+            margin-top: 10px;
+            background: #ff416c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <div class="logo">
-            <h1>iLyxx Store</h1>
-        </div>
+        <div class="logo">iLyxx Store</div>
         <nav>
             <ul>
-                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#">Top Up</a></li>
-                <li><a href="#">Joki</a></li>
                 <li><a href="#">Beli Akun</a></li>
-                <li><a href="#">Lelang</a></li>
-                <li><a href="#">Riwayat</a></li>
+                <li><a href="#">Jasa Joki</a></li>
+                <li><a href="https://wa.me/6287875962943" target="_blank">WhatsApp</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="slider">
-        <!-- Gambar slider promosi -->
-        <img src="slider1.jpg" alt="Promo 1">
-        <img src="slider2.jpg" alt="Promo 2">
+    <section class="banner">
+        <h1>Flash Sale Akun & Diamond Game</h1>
+        <p>Dapatkan akun dan diamond favoritmu dengan harga terbaik!</p>
     </section>
 
-    <section class="services">
-        <div class="service">
-            <h2>Beli Akun</h2>
-            <p>Temukan akun game impian Anda dengan harga terbaik.</p>
-            <a href="#">Lihat Akun</a>
-        </div>
-        <div class="service">
-            <h2>Jasa Joki</h2>
-            <p>Tingkatkan peringkat game Anda dengan bantuan profesional.</p>
-            <a href="#">Pesan Joki</a>
-        </div>
-        <div class="service">
-            <h2>Top Up Games</h2>
-            <p>Isi ulang mata uang atau item game dengan cepat dan aman.</p>
-            <a href="#">Top Up Sekarang</a>
+    <section class="kategori">
+        <button>Top Up</button>
+        <button>Beli Akun</button>
+        <button>Jasa Joki</button>
+    </section>
+
+    <section class="produk">
+        <h2>Produk Populer</h2>
+        <div class="produk-list">
+            <div class="produk-item">
+                <img src="https://via.placeholder.com/150" alt="Produk 1">
+                <h3>Diamond Mobile Legends</h3>
+                <p>Harga: Rp 50.000</p>
+                <a href="https://wa.me/6287875962943" class="btn">Beli Sekarang</a>
+            </div>
+            <div class="produk-item">
+                <img src="https://via.placeholder.com/150" alt="Produk 2">
+                <h3>Akun FF Sultan</h3>
+                <p>Harga: Rp 300.000</p>
+                <a href="https://wa.me/6287875962943" class="btn">Beli Sekarang</a>
+            </div>
         </div>
     </section>
 
     <footer>
-        <p>© 2025 iLyxx Store - Semua hak dilindungi.</p>
-        <p>Alamat: Jl. Contoh Alamat No. 123, Jakarta</p>
-        <p>Email: info@ilyxxstore.com | Telp: 021-12345678</p>
-        <div class="social-media">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-        </div>
+        <p>© 2025 iLyxx Store | Hubungi kami di WhatsApp: <a href="https://wa.me/6287875962943">6287875962943</a></p>
     </footer>
+
 </body>
 </html>
