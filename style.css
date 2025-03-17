@@ -1,74 +1,95 @@
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: #f8f9fa;
-    color: #333;
-    text-align: center;
+    background-color: #f4f4f4;
 }
 
 header {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    padding: 20px;
-    font-size: 1.5em;
-}
-
-.products {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.product {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    padding: 15px;
-    width: 250px;
-    transition: transform 0.3s;
+.logo h1 {
+    margin-left: 20px;
 }
 
-.product img {
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
     width: 100%;
-    border-radius: 10px;
+    height: 300px;
 }
 
-.product h2 {
-    font-size: 1.2em;
-    margin: 10px 0;
+.slider img {
+    width: 100%;
+    height: auto;
 }
 
-.product p {
+.services {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.service {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.service h2 {
+    color: #333;
+}
+
+.service p {
     color: #666;
-    font-size: 0.9em;
 }
 
-.buy-button {
+.service a {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 15px;
-    background: #2575fc;
-    color: white;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.buy-button:hover {
-    background: #6a11cb;
 }
 
 footer {
-    background: #333;
-    color: white;
-    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
     margin-top: 20px;
+}
+
+.social-media a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
 }
