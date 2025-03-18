@@ -25,7 +25,3 @@ function kirimWhatsApp(event) {
     const url = `https://wa.me/${nomorWA}?text=Nama: ${nama}%0AEmail: ${email}%0APesan: ${pesan}`;
     window.open(url, "_blank");
 }
-
-function redirectToForm(gameName) {
-    window.location.href = `topup-form.html?game=${encodeURIComponent(gameName)}`;
-}
