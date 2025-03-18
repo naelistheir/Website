@@ -10,12 +10,14 @@ body {
 
 /* Carousel Container */
 .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel img {
     width: 100%;
-    height: 200px; /* Sesuaikan dengan tinggi banner */
-    max-width: 1200px; /* Setel lebar maksimum */
-    margin: 0 auto; /* Center carousel */
-    overflow: hidden;
-    position: relative;
+    height: auto; /* Otomatis mengikuti tinggi gambar */
 }
 
 /* Carousel Gambar */
@@ -23,13 +25,6 @@ body {
     display: flex;
     width: 300%; /* 3 gambar, sehingga lebarnya 3x lebar container */
     transition: transform 0.5s ease; /* Tambahkan transisi untuk gerakan gambar */
-}
-
-/* Gambar di Carousel */
-.carousel-img {
-    width: 33.3333%; /* Membagi lebar gambar agar sesuai dengan 3 gambar dalam satu kali slide */
-    height: 100%; /* Sesuaikan tinggi gambar dengan tinggi container */
-    object-fit: cover; /* Agar gambar menutupi seluruh area tanpa terdistorsi */
 }
 
 /* Animasi Teks */
