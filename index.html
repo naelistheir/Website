@@ -3,145 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iLyxx Store - Profil</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css">
+    <title>iLyxx Store - Top Up & Akun Gaming</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        .container {
-            margin-top: 50px;
-        }
-        .teks_merek {
-            color: #007bff;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .service, .profil {
-            background: white;
-            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            background-color: #2C2C2C; /* Abu-abu tua */
+            color: #FFFFFF; /* Putih */
+            margin: 0;
+            padding: 0;
             text-align: center;
-            padding: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
-        .service:hover, .profil:hover {
-            transform: translateY(-10px);
-        }
-        .kotak_ikon {
-            font-size: 40px;
-            background: #007bff;
-            color: white;
-            width: 70px;
-            height: 70px;
+
+        header {
+            background-color: #3A3A3A; /* Abu-abu medium */
+            padding: 15px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            margin: 0 auto 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
-        .tautan {
-            display: inline-block;
-            margin-top: 10px;
-            text-decoration: none;
-            color: #007bff;
+
+        h1 {
+            font-size: 24px;
             font-weight: bold;
         }
-        .tautan:hover {
-            text-decoration: underline;
-        }
-        .kontak a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+
+        nav a {
+            color: #FFF;
             text-decoration: none;
-            color: white;
-            background: #007bff;
-            padding: 10px 15px;
-            border-radius: 5px;
-            margin: 5px;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: 0.3s;
         }
-        .kontak a i {
-            margin-right: 10px;
+
+        nav a:hover {
+            color: #BBBBBB; /* Efek hover abu-abu muda */
         }
+
+        .hero {
+            padding: 50px;
+            background: #444; /* Abu-abu medium */
+            border-bottom: 3px solid #555;
+        }
+
+        .layanan {
+            padding: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: #3A3A3A;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            background: #505050; /* Abu-abu lebih terang saat hover */
+        }
+
+        .kontak {
+            background: #444;
+            padding: 30px;
+        }
+
+        .kontak a {
+            color: #FFF;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
         .kontak a:hover {
-            background: #0056b3;
+            color: #BBBBBB; /* Efek hover */
+        }
+
+        footer {
+            background: #3A3A3A;
+            padding: 10px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
 
-<!-- Profil -->
-<section id="profil" class="container">
-    <div class="row pb-4 text-center">
-        <div class="col-lg-8 mx-auto">
-            <h6 class="teks_merek">TENTANG KAMI</h6>
-            <h1>iLyxx Store</h1>
-            <p>iLyxx Store adalah platform terpercaya untuk pembelian **Diamond Game** dan **Akun Premium**. Kami menawarkan harga terbaik dengan proses yang cepat, aman, dan terpercaya.</p>
-        </div>
-    </div>
-</section>
+    <header>
+        <h1>iLyxx Store</h1>
+        <nav>
+            <a href="#layanan">Layanan</a>
+            <a href="#kontak">Kontak</a>
+        </nav>
+    </header>
 
-<!-- Layanan -->
-<section id="layanan" class="container">
-    <div class="row pb-4 text-center">
-        <div class="col-lg-8 mx-auto">
-            <h6 class="teks_merek">LAYANAN</h6>
-            <h1>Jenis Layanan</h1>
-        </div>
-    </div>
-    <div class="row gy-4">
-        <div class="col-md-4">
-            <div class="service">
-                <div class="kotak_ikon">
-                    <i class="las la-gamepad"></i>
-                </div>
-                <h5>Top-Up Game</h5>
-                <p>Menyediakan layanan top-up game dengan harga murah dan proses cepat.</p>
-                <a href="#" class="tautan">Baca Selengkapnya</a>
+    <section class="hero">
+        <h2>Top Up Game & Akun Terpercaya</h2>
+        <p>Harga murah, proses cepat, dan layanan terbaik!</p>
+    </section>
+
+    <section id="layanan" class="layanan">
+        <h2>Layanan yang Saya Berikan</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3>Top Up Game</h3>
+                <p>Diamond Mobile Legends, Free Fire, PUBG, dan lainnya.</p>
+            </div>
+            <div class="card">
+                <h3>Jual Akun</h3>
+                <p>Akun game berkualitas dengan harga terjangkau.</p>
+            </div>
+            <div class="card">
+                <h3>Joki & Boosting</h3>
+                <p>Bantu naik rank dengan aman dan terpercaya.</p>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="service">
-                <div class="kotak_ikon">
-                    <i class="las la-user"></i>
-                </div>
-                <h5>Jual Akun</h5>
-                <p>Menjual akun premium berbagai game dengan harga terjangkau dan aman.</p>
-                <a href="#" class="tautan">Baca Selengkapnya</a>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="service">
-                <div class="kotak_ikon">
-                    <i class="las la-headset"></i>
-                </div>
-                <h5>Customer Support</h5>
-                <p>Melayani pertanyaan dan bantuan terkait transaksi dengan respons cepat.</p>
-                <a href="#" class="tautan">Baca Selengkapnya</a>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- Kontak -->
-<section id="kontak" class="container mt-5 text-center">
-    <h6 class="teks_merek">HUBUNGI KAMI</h6>
-    <h2>Kontak iLyxx Store</h2>
-    <p>Jika ada pertanyaan atau ingin melakukan transaksi, hubungi kami melalui WhatsApp atau Instagram:</p>
-    <div class="d-flex justify-content-center kontak">
-        <a href="https://wa.me/6287875962943" target="_blank">
-            <i class="las la-phone"></i> WhatsApp
-        </a>
-        <a href="https://instagram.com/aelvyou" target="_blank">
-            <i class="lab la-instagram"></i> Instagram
-        </a>
-    </div>
-</section>
+    <section id="kontak" class="kontak">
+        <h2>Hubungi Saya</h2>
+        <p>WhatsApp: <a href="https://wa.me/6287875962943" target="_blank">+62 878-7596-2943</a></p>
+        <p>Instagram: <a href="https://instagram.com/aelvyou" target="_blank">@aelvyou</a></p>
+    </section>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <footer>
+        <p>© 2025 iLyxx Store. All rights reserved.</p>
+    </footer>
+
 </body>
 </html>
