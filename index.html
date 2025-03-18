@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iLyxx Store - Top Up & Akun Gaming</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
             --bg-color: #2C2C2C;
             --text-color: #FFFFFF;
             --card-bg: #FFFFFF;
-            --primary-dark: #1E1E1E;
         }
 
-        /* Mode Terang */
-        .light-mode {
-            --bg-color: #FFFFFF;
-            --text-color: #2C2C2C;
-            --card-bg: #F5F5F5;
-        }
-
+        /* Global Style */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: var(--bg-color);
@@ -30,6 +24,7 @@
             transition: 0.3s;
         }
 
+        /* Header */
         header {
             background-color: var(--card-bg);
             padding: 15px;
@@ -37,17 +32,20 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 100;
         }
 
-        h1, h2, h3 {
-            margin: 0;
-            transition: 0.3s;
+        nav {
+            display: flex;
+            gap: 15px;
         }
 
         nav a {
-            color: var(--text-color);
+            color: var(--bg-color);
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
             transition: 0.3s;
         }
@@ -56,36 +54,26 @@
             opacity: 0.7;
         }
 
-        /* Hero Section dengan Parallax */
+        /* Hero Section */
         .hero {
             padding: 100px 20px;
-            background: url('https://source.unsplash.com/1600x900/?gaming') center/cover fixed;
+            background: #3C3C3C;
             color: var(--text-color);
-            position: relative;
         }
 
         .hero h2 {
             font-size: 28px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
 
-        /* Efek Ketik */
-        .typing {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid var(--text-color);
-            animation: typing 4s steps(20) infinite alternate;
-        }
-
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+        .hero p {
+            font-size: 18px;
         }
 
         /* Layanan */
         .layanan {
-            padding: 40px;
+            padding: 60px 20px;
             background: var(--card-bg);
         }
 
@@ -94,13 +82,15 @@
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
+            margin-top: 20px;
         }
 
         .card {
             background: var(--card-bg);
             padding: 20px;
             border-radius: 10px;
-            width: 250px;
+            width: 300px;
+            text-align: center;
             transition: 0.3s;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
@@ -109,34 +99,15 @@
             transform: scale(1.05);
         }
 
-        /* Testimoni */
-        .testimoni {
-            padding: 40px;
-            background: var(--bg-color);
-            color: var(--text-color);
-        }
-
-        .slider {
-            display: flex;
-            overflow: hidden;
-            width: 100%;
-            max-width: 400px;
-            margin: auto;
-        }
-
-        .slide {
-            min-width: 100%;
-            transition: 0.5s;
-        }
-
         /* Kontak */
         .kontak {
             background: var(--card-bg);
-            padding: 30px;
+            padding: 40px;
+            margin-top: 30px;
         }
 
         .kontak a {
-            color: var(--text-color);
+            color: var(--bg-color);
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
@@ -146,43 +117,36 @@
             opacity: 0.7;
         }
 
-        /* Tombol Mode Gelap/Terang */
-        .theme-toggle {
-            cursor: pointer;
-            font-size: 16px;
-            background: var(--text-color);
-            color: var(--bg-color);
-            padding: 10px;
-            border-radius: 5px;
-            transition: 0.3s;
+        /* Footer */
+        footer {
+            background: var(--bg-color);
+            padding: 20px;
+            font-size: 14px;
         }
 
-        .theme-toggle:hover {
-            opacity: 0.7;
-        }
+        /* Responsivitas */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
 
-        /* Floating Cart */
-        .cart {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--text-color);
-            color: var(--bg-color);
-            padding: 15px;
-            border-radius: 50%;
-            font-size: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-        }
+            nav {
+                margin-top: 10px;
+            }
 
-        .cart:hover {
-            transform: scale(1.1);
-        }
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
 
+            .hero {
+                padding: 80px 10px;
+            }
+        }
     </style>
 </head>
-<body onload="loadAnimation()">
+<body>
 
     <header>
         <h1>iLyxx Store</h1>
@@ -190,29 +154,28 @@
             <a href="#layanan">Layanan</a>
             <a href="#kontak">Kontak</a>
         </nav>
-        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
     </header>
 
     <section class="hero">
-        <h2 class="typing">Top Up Game & Akun Terpercaya</h2>
+        <h2>Top Up Game & Akun Terpercaya</h2>
         <p>Harga murah, proses cepat, dan layanan terbaik!</p>
     </section>
 
     <section id="layanan" class="layanan">
         <h2>Layanan yang Saya Berikan</h2>
         <div class="card-container">
-            <div class="card"><h3>Top Up Game</h3><p>Diamond ML, FF, PUBG, dll.</p></div>
-            <div class="card"><h3>Jual Akun</h3><p>Akun berkualitas dengan harga terbaik.</p></div>
-            <div class="card"><h3>Joki & Boosting</h3><p>Bantu naik rank dengan aman.</p></div>
-        </div>
-    </section>
-
-    <section class="testimoni">
-        <h2>Apa Kata Pelanggan?</h2>
-        <div class="slider">
-            <div class="slide">⭐⭐⭐⭐⭐ "Cepat & Aman!"</div>
-            <div class="slide">⭐⭐⭐⭐⭐ "Pelayanan mantap!"</div>
-            <div class="slide">⭐⭐⭐⭐⭐ "Rekomendasi buat top up!"</div>
+            <div class="card">
+                <h3>Top Up Game</h3>
+                <p>Diamond Mobile Legends, Free Fire, PUBG, dan lainnya.</p>
+            </div>
+            <div class="card">
+                <h3>Jual Akun</h3>
+                <p>Akun game berkualitas dengan harga terjangkau.</p>
+            </div>
+            <div class="card">
+                <h3>Joki & Boosting</h3>
+                <p>Bantu naik rank dengan aman dan terpercaya.</p>
+            </div>
         </div>
     </section>
 
@@ -225,19 +188,6 @@
     <footer>
         <p>© 2025 iLyxx Store. All rights reserved.</p>
     </footer>
-
-    <div class="cart">🛒</div>
-
-    <script>
-        function toggleTheme() {
-            document.body.classList.toggle("light-mode");
-        }
-
-        function loadAnimation() {
-            document.body.style.opacity = 0;
-            setTimeout(() => document.body.style.opacity = 1, 300);
-        }
-    </script>
 
 </body>
 </html>
