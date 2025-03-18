@@ -10,19 +10,21 @@ body {
 
 /* Carousel Container */
 .carousel {
+    width: 100%;
     max-width: 100%;
     overflow: hidden;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+    position: relative;
 }
 
 .carousel-inner {
-    max-width: 100%;
-    overflow: hidden;
+    display: flex;
+    width: 300%; /* Untuk menampung semua gambar */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+    width: 100%;
+    flex: 1 0 100%;
 }
 .carousel-item {
     width: 100%;
