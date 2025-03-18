@@ -55,6 +55,9 @@
             background: #FFFFFF;
             border-bottom: 3px solid #CCCCCC;
             color: #2C2C2C;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-in-out;
         }
 
         /* Layanan Section */
@@ -79,6 +82,9 @@
             transition: 0.3s;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             color: #2C2C2C;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-in-out;
         }
 
         .card:hover {
@@ -90,6 +96,9 @@
             background: #FFFFFF;
             padding: 30px;
             color: #2C2C2C;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-in-out;
         }
 
         .kontak a {
@@ -138,6 +147,12 @@
             padding: 10px;
             font-size: 14px;
             color: #FFFFFF;
+        }
+
+        /* Animasi Scroll */
+        .show {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
         }
 
         /* Responsive */
@@ -214,21 +229,35 @@
         <p>© 2025 iLyxx Store. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript untuk Kirim Pesan ke WhatsApp -->
+    <!-- JavaScript -->
     <script>
-        function kirimPesan(event) {
-            event.preventDefault(); // Mencegah form submit default
+        // Animasi saat scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            const elements = document.querySelectorAll(".card, .hero, .kontak");
 
-            // Ambil data dari input
+            function checkScroll() {
+                const triggerBottom = window.innerHeight * 0.85;
+
+                elements.forEach((element) => {
+                    const boxTop = element.getBoundingClientRect().top;
+
+                    if (boxTop < triggerBottom) {
+                        element.classList.add("show");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", checkScroll);
+            checkScroll();
+        });
+
+        // Kirim pesan ke WhatsApp
+        function kirimPesan(event) {
+            event.preventDefault();
             var nama = document.getElementById("nama").value;
             var email = document.getElementById("email").value;
             var pesan = document.getElementById("pesan").value;
-
-            // Nomor WhatsApp tujuan
-            var nomorWA = "6287875962943"; 
-            var linkWA = `https://wa.me/${nomorWA}?text=${pesan}`;
-
-            // Arahkan ke WhatsApp
+            var linkWA = `https://wa.me/6287875962943?text=${encodeURIComponent(`Halo, saya ${nama}. Email: ${email}. Pesan: ${pesan}`)}`;
             window.open(linkWA, "_blank");
         }
     </script>
