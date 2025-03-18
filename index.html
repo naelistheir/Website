@@ -8,21 +8,21 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #2C2C2C;
+            background-color: #1F1F1F; /* Abu-abu gelap */
             color: #FFFFFF;
             margin: 0;
             padding: 0;
             text-align: center;
         }
 
-        /* Header dengan efek glow */
+        /* Header */
         header {
             background-color: #FFFFFF;
             padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.2); /* Efek emas lembut */
             color: #2C2C2C;
         }
 
@@ -30,10 +30,10 @@
             font-size: 24px;
             font-weight: bold;
             color: #2C2C2C;
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.6); /* Glow emas */
         }
 
-        /* Efek hover neon di navigasi */
+        /* Navigasi */
         nav a {
             color: #2C2C2C;
             text-decoration: none;
@@ -44,33 +44,34 @@
         }
 
         nav a:hover {
-            color: #6B7280; /* Abu-abu stylish */
+            color: #FFD700; /* Gold */
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
         }
 
-        /* Hero section dengan gradient futuristik */
+        /* Hero section */
         .hero {
             padding: 50px;
-            background: linear-gradient(135deg, #4F46E5, #6B7280);
-            color: #fff;
-            border-bottom: 3px solid #3F3F46;
+            background: linear-gradient(135deg, #2C2C2C, #3D3D3D); /* Abu-abu futuristik */
+            color: #FFD700; /* Gold */
+            border-bottom: 3px solid #444;
         }
 
-        /* Animasi teks berubah warna halus */
+        /* Animasi teks glowing */
         @keyframes glowing-text {
-            0% { color: #E0E7FF; }
-            50% { color: #CBD5E1; }
-            100% { color: #E0E7FF; }
+            0% { color: #FFD700; }
+            50% { color: #FFEB8A; }
+            100% { color: #FFD700; }
         }
 
         .hero h2 {
             animation: glowing-text 2s infinite alternate;
         }
 
-        /* Section layanan */
+        /* Layanan */
         .layanan {
             padding: 40px;
-            background: #F5F5F5;
-            color: #2C2C2C;
+            background: #282828; /* Abu-abu gelap */
+            color: #FFFFFF;
         }
 
         .card-container {
@@ -80,47 +81,48 @@
             flex-wrap: wrap;
         }
 
-        /* Efek hover pada card layanan */
+        /* Card dengan efek premium */
         .card {
             background: #FFFFFF;
             padding: 20px;
             border-radius: 10px;
             width: 250px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.1); /* Shadow gold */
             color: #2C2C2C;
         }
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 0px 15px rgba(79, 70, 229, 0.5);
-            background: #E5E7EB;
+            box-shadow: 0px 0px 15px rgba(255, 215, 0, 0.6);
+            background: #FFF7D1; /* Kuning keemasan */
         }
 
         /* Bagian kontak */
         .kontak {
-            background: #FFFFFF;
+            background: #1F1F1F; /* Gelap */
             padding: 30px;
-            color: #2C2C2C;
+            color: #FFD700;
         }
 
         .kontak a {
-            color: #2C2C2C;
+            color: #FFD700;
             text-decoration: none;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .kontak a:hover {
-            color: #6B7280;
+            color: #FFEB8A;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
         }
 
         /* Footer */
         footer {
-            background: #2C2C2C;
+            background: #1F1F1F;
             padding: 10px;
             font-size: 14px;
-            color: #FFFFFF;
+            color: #FFD700;
         }
     </style>
 </head>
