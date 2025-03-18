@@ -129,52 +129,69 @@ nav a:hover {
     margin-top: 20px;
 }
 
-/* Testimonials Section */
-.testimonials {
-    padding: 50px;
-    background: #F5F5F5;
-    text-align: center;
+/* Ulasan Section */
+.ulasan {
+    padding: 40px;
+    background-color: #F5F5F5;
     color: #2C2C2C;
 }
 
-.testimonials h2 {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 30px;
+.ulasan h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2C2C2C;
 }
 
-.testimonials-container {
+.ulasan-container {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     flex-wrap: wrap;
 }
 
-.testimonial-card {
-    background: #FFFFFF;
-    padding: 30px;
+.ulasan-card {
+    background-color: #FFFFFF;
+    padding: 20px;
     border-radius: 10px;
-    width: 250px;
+    width: 300px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    transition: 0.3s;
+    color: #2C2C2C;
 }
 
-.testimonial-card img {
-    width: 80px;
-    height: 80px;
+.ulasan-card:hover {
+    background-color: #EAEAEA;
+}
+
+.ulasan-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.ulasan-avatar {
     border-radius: 50%;
-    margin-bottom: 20px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }
 
-.testimonial-card p {
-    font-size: 16px;
-    font-style: italic;
-    margin-bottom: 10px;
-}
-
-.testimonial-card h3 {
+.ulasan-info h3 {
     font-size: 18px;
     font-weight: bold;
+}
+
+.ulasan-info .ulasan-role {
+    font-size: 14px;
+    color: #777777;
+}
+
+.ulasan-text {
+    font-style: italic;
+    font-size: 16px;
+    color: #555555;
 }
 
 /* Upcoming Features Section */
