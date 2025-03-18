@@ -8,6 +8,7 @@ body {
     text-align: center;
 }
 
+/* Style untuk overlay popup */
 .popup {
     display: none; /* Awalnya tersembunyi */
     position: fixed;
@@ -20,16 +21,39 @@ body {
     align-items: center;
 }
 
+/* Style untuk kotak popup */
 .popup-content {
-    background: linear-gradient(to bottom, #dddddd, #ffffff); /* Gradasi abu-abu ke putih */
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Gradasi putih ke abu muda */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Style untuk tombol close (X) */
 .close-btn {
     position: absolute;
     top: 10px;
     right: 15px;
     font-size: 20px;
     cursor: pointer;
+}
+
+/* Style untuk tombol "Tutup" */
+.popup button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    border: none;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background: #555;
 }
 
 /* Carousel Container */
