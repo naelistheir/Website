@@ -9,54 +9,75 @@ body {
 }
 
 /* Style untuk overlay popup */
+/* Style overlay */
 .popup {
-    display: none; /* Awalnya tersembunyi */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+    background: rgba(0, 0, 0, 0.4); /* Transparan gelap aesthetic */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Style untuk kotak popup */
+/* Style box popup */
 .popup-content {
-    color: #222; /* Warna teks hitam elegan */
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Gradasi putih ke abu muda */
-    padding: 20px;
-    border-radius: 10px;
+    background: linear-gradient(to bottom, #ffffff, #e0e0e0); /* Gradasi soft */
+    padding: 25px;
+    border-radius: 15px; /* Sudut lebih halus */
     text-align: center;
-    width: 300px;
-    position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 320px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.4s ease-in-out;
 }
 
-/* Style untuk tombol close (X) */
+/* Animasi masuk */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Style tombol close (X) */
 .close-btn {
     position: absolute;
-    top: 10px;
+    top: 12px;
     right: 15px;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
+    color: #555;
+    transition: 0.3s;
 }
 
-/* Style untuk tombol "Tutup" */
+.close-btn:hover {
+    color: #111;
+}
+
+/* Style tombol "Lanjutkan" */
 .popup button {
     margin-top: 15px;
-    padding: 8px 15px;
+    padding: 10px 18px;
     border: none;
-    background: #333;
+    background: #222;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
 .popup button:hover {
-    background: #555;
+    background: #444;
 }
-
 /* Carousel Container */
 .carousel-container {
     display: flex;
