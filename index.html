@@ -6,23 +6,33 @@
     <title>iLyxx Store - Top Up & Akun Gaming</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #2C2C2C; /* Abu-abu tua */
             color: #FFFFFF; /* Putih */
-            margin: 0;
-            padding: 0;
             text-align: center;
         }
 
+        /* HEADER */
         header {
-            background-color: #FFFFFF; /* Putih */
-            padding: 15px;
+            background-color: #FFFFFF; 
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             color: #2C2C2C;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
         }
 
         h1 {
@@ -37,97 +47,26 @@
             margin: 0 15px;
             font-weight: bold;
             transition: 0.3s;
-            position: relative;
         }
 
-        /* Efek neon pada navigasi */
-        nav a::after {
-            content: "";
-            display: block;
-            height: 2px;
-            width: 0;
-            background: #CCCCCC;
-            transition: width 0.4s;
+        nav a:hover {
+            color: #777777; /* Abu-abu muda */
         }
 
-        nav a:hover::after {
-            width: 100%;
-        }
-
+        /* HERO SECTION */
         .hero {
-            padding: 50px;
+            padding: 60px 5%;
             background: #FFFFFF;
             border-bottom: 3px solid #CCCCCC;
             color: #2C2C2C;
-            position: relative;
-            overflow: hidden;
+            animation: fadeInUp 1s ease-in-out;
         }
 
-        /* Efek parallax */
-        .hero::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://source.unsplash.com/1600x900/?gaming,technology') no-repeat center center/cover;
-            opacity: 0.2;
-            z-index: -1;
-        }
-
-        /* Typing animation */
-        .typing-text::after {
-            content: "|";
-            display: inline-block;
-            animation: blink 0.7s infinite;
-        }
-
-        @keyframes blink {
-            50% { opacity: 0; }
-        }
-
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-
-        .typing-text {
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 2px solid #2C2C2C;
-            width: 0;
-            animation: typing 3s steps(40) forwards;
-        }
-
+        /* LAYANAN */
         .layanan {
-            padding: 40px;
+            padding: 60px 5%;
             background: #F5F5F5;
             color: #2C2C2C;
-            position: relative;
-        }
-
-        /* Garis pemisah elegan */
-        .divider {
-            width: 80%;
-            height: 2px;
-            background: #CCCCCC;
-            margin: 20px auto;
-            opacity: 0;
-            transform: scaleX(0);
-            animation: fadeInScale 1s ease-out forwards;
-        }
-
-        @keyframes fadeInScale {
-            from {
-                opacity: 0;
-                transform: scaleX(0);
-            }
-            to {
-                opacity: 1;
-                transform: scaleX(1);
-            }
         }
 
         .card-container {
@@ -142,31 +81,23 @@
             padding: 20px;
             border-radius: 10px;
             width: 250px;
-            transition: 0.3s;
+            transition: 0.3s ease-in-out;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             color: #2C2C2C;
-            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease-in-out forwards;
         }
 
         .card:hover {
             background: #EAEAEA;
+            transform: scale(1.05);
         }
 
-        /* Icon animasi */
-        .card i {
-            font-size: 30px;
-            display: block;
-            margin-bottom: 10px;
-            transition: transform 0.3s;
-        }
-
-        .card:hover i {
-            transform: scale(1.2);
-        }
-
+        /* KONTAK */
         .kontak {
             background: #FFFFFF;
-            padding: 30px;
+            padding: 50px 5%;
             color: #2C2C2C;
         }
 
@@ -174,19 +105,50 @@
             color: #2C2C2C;
             text-decoration: none;
             font-weight: bold;
+            display: inline-block;
+            padding: 10px 20px;
+            border: 2px solid #2C2C2C;
+            border-radius: 5px;
+            margin-top: 10px;
             transition: 0.3s;
         }
 
         .kontak a:hover {
-            color: #777777;
+            background: #2C2C2C;
+            color: #FFFFFF;
         }
 
+        /* FOOTER */
         footer {
             background: #2C2C2C;
             padding: 10px;
             font-size: 14px;
             color: #FFFFFF;
         }
+
+        /* ANIMASI */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            .card {
+                width: 90%;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -200,33 +162,27 @@
     </header>
 
     <section class="hero">
-        <h2><span class="typing-text">Top Up Game & Akun Terpercaya | Proses Cepat | Harga Terjangkau</span></h2>
+        <h2>Top Up Game & Akun Terpercaya</h2>
+        <p>Harga murah, proses cepat, dan layanan terbaik!</p>
     </section>
-
-    <div class="divider"></div>
 
     <section id="layanan" class="layanan">
         <h2>Layanan yang Saya Berikan</h2>
         <div class="card-container">
             <div class="card">
-                <i>🎮</i>
                 <h3>Top Up Game</h3>
                 <p>Diamond Mobile Legends, Free Fire, PUBG, dan lainnya.</p>
             </div>
             <div class="card">
-                <i>🛒</i>
                 <h3>Jual Akun</h3>
                 <p>Akun game berkualitas dengan harga terjangkau.</p>
             </div>
             <div class="card">
-                <i>⚡</i>
                 <h3>Joki & Boosting</h3>
                 <p>Bantu naik rank dengan aman dan terpercaya.</p>
             </div>
         </div>
     </section>
-
-    <div class="divider"></div>
 
     <section id="kontak" class="kontak">
         <h2>Hubungi Saya</h2>
