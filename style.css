@@ -1,13 +1,56 @@
-/* Global Style */
+/* Global Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #2C2C2C;
-    color: #FFFFFF;
     margin: 0;
     padding: 0;
-    text-align: center;
+    overflow-x: hidden;
 }
 
+/* Carousel Container */
+.carousel-container {
+    width: 100%;
+    height: 400px; /* Sesuaikan dengan tinggi banner */
+    max-width: 1200px; /* Setel lebar maksimum */
+    margin: 0 auto; /* Center carousel */
+    overflow: hidden;
+    position: relative;
+}
+
+/* Carousel Gambar */
+.carousel {
+    display: flex;
+    width: 300%; /* 3 gambar, sehingga lebarnya 3x lebar container */
+    transition: transform 0.5s ease; /* Tambahkan transisi untuk gerakan gambar */
+}
+
+/* Gambar di Carousel */
+.carousel-img {
+    width: 33.3333%; /* Membagi lebar gambar agar sesuai dengan 3 gambar dalam satu kali slide */
+    height: 100%; /* Sesuaikan tinggi gambar dengan tinggi container */
+    object-fit: cover; /* Agar gambar menutupi seluruh area tanpa terdistorsi */
+}
+
+/* Tombol Navigasi */
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 20px;
+}
+
+button.next {
+    right: 20px;
+}
 /* Animasi Teks */
 .animasi-teks {
     opacity: 0;
@@ -51,38 +94,6 @@ nav a {
 
 nav a:hover {
     color: #777777;
-}
-
-/* Style untuk Carousel */
-.carousel-container {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 30px; /* Menambahkan spasi bawah */
-}
-
-.carousel-slide {
-    display: flex;
-    transition: transform 1s ease-in-out;
-}
-
-.carousel-slide img {
-    width: 100%;
-    max-width: 1200px;
-    height: 400px;
-    object-fit: cover;
-}
-
-/* Animasi untuk Auto-Slide */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    33% { transform: translateX(-100%); }
-    66% { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
-}
-
-.carousel-slide {
-    animation: slide 9s infinite;
 }
 
 /* Hero Section */
