@@ -6,6 +6,7 @@
     <title>iLyxx Store - Top Up & Akun Gaming</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #2C2C2C; /* Abu-abu tua */
@@ -13,6 +14,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
+            overflow-x: hidden;
         }
 
         header {
@@ -23,6 +25,9 @@
             align-items: center;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
             color: #2C2C2C;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
         }
 
         h1 {
@@ -40,20 +45,26 @@
         }
 
         nav a:hover {
-            color: #777777; /* Abu-abu muda */
+            color: #777777;
         }
 
         .hero {
             padding: 50px;
-            background: #FFFFFF; /* Putih */
-            border-bottom: 3px solid #CCCCCC;
+            background: #FFFFFF;
             color: #2C2C2C;
+            border-bottom: 3px solid #CCCCCC;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 0.5s;
         }
 
         .layanan {
             padding: 40px;
-            background: #F5F5F5; /* Abu-abu terang */
+            background: #F5F5F5;
             color: #2C2C2C;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 1s;
         }
 
         .card-container {
@@ -68,30 +79,39 @@
             padding: 20px;
             border-radius: 10px;
             width: 250px;
-            transition: 0.3s;
+            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             color: #2C2C2C;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 1.5s;
         }
 
         .card:hover {
-            background: #EAEAEA; /* Lebih terang saat hover */
+            transform: translateY(-10px);
+            background: #EAEAEA;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
         }
 
         .kontak {
             background: #FFFFFF;
             padding: 30px;
             color: #2C2C2C;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 2s;
         }
 
         .kontak a {
             color: #2C2C2C;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
 
         .kontak a:hover {
-            color: #777777; /* Efek hover */
+            color: #777777;
+            transform: scale(1.1);
         }
 
         footer {
@@ -99,6 +119,32 @@
             padding: 10px;
             font-size: 14px;
             color: #FFFFFF;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards 2.5s;
+        }
+
+        /* Animasi */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
