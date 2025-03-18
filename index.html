@@ -201,10 +201,10 @@
         <p>Instagram: <a href="https://instagram.com/aelvyou" target="_blank">@aelvyou</a></p>
 
         <!-- Formulir Kontak -->
-        <form class="form-kontak">
-            <input type="text" placeholder="Nama Anda" required>
-            <input type="email" placeholder="Email Anda" required>
-            <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+        <form class="form-kontak" onsubmit="kirimPesan(event)">
+            <input type="text" id="nama" placeholder="Nama Anda" required>
+            <input type="email" id="email" placeholder="Email Anda" required>
+            <textarea id="pesan" placeholder="Pesan Anda" rows="4" required></textarea>
             <button type="submit">Kirim Pesan</button>
         </form>
     </section>
@@ -213,6 +213,28 @@
     <footer>
         <p>© 2025 iLyxx Store. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript untuk Kirim Pesan ke WhatsApp -->
+    <script>
+        function kirimPesan(event) {
+            event.preventDefault(); // Mencegah form submit default
+
+            // Ambil data dari input
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var pesan = document.getElementById("pesan").value;
+
+            // Format pesan untuk WhatsApp
+            var teksPesan = `Halo, saya ${nama} (%0AEmail: ${email})%0A%0A${pesan}`;
+            
+            // Nomor WhatsApp tujuan
+            var nomorWA = "6287875962943"; 
+            var linkWA = `https://wa.me/${nomorWA}?text=${teksPesan}`;
+
+            // Arahkan ke WhatsApp
+            window.open(linkWA, "_blank");
+        }
+    </script>
 
 </body>
 </html>
