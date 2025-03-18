@@ -1,9 +1,11 @@
-/* Global Styles */
+/* Global Style */
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: #2C2C2C;
+    color: #FFFFFF;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    text-align: center;
 }
 
 /* Carousel Container */
@@ -30,27 +32,6 @@ body {
     object-fit: cover; /* Agar gambar menutupi seluruh area tanpa terdistorsi */
 }
 
-/* Tombol Navigasi */
-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-button.prev {
-    left: 20px;
-}
-
-button.next {
-    right: 20px;
-}
 /* Animasi Teks */
 .animasi-teks {
     opacity: 0;
