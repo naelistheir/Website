@@ -8,14 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close-btn" onclick="closePopup()">&times;</span>
-        <h2>Selamat Datang!</h2>
-        <p>Terima kasih sudah mengunjungi website kami.</p>
-    </div>
-    </div>
     
     <!-- Header -->
     <header>
@@ -26,6 +18,15 @@
         </nav>
     </header>
 
+    <div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>Selamat Datang!</h2>
+        <p>Terima kasih sudah mengunjungi website kami.</p>
+        <button onclick="closePopup()">Tutup</button>
+    </div>
+    </div>
+    
     <!-- Carousel Banner -->
         <div class="carousel-container">
             <div class="carousel">
