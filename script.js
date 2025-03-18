@@ -16,30 +16,30 @@ document.addEventListener("DOMContentLoaded", function() {
     cekScroll(); 
 });
 
-// Menambahkan fungsi untuk mengontrol slide secara manual
-let currentIndex = 0;
-const images = document.querySelectorAll('.carousel-img');
-const totalImages = images.length;
+let currentIndex = 0; // Menyimpan indeks gambar yang sedang ditampilkan
+const images = document.querySelectorAll('.carousel-img'); // Mengambil semua gambar di carousel
+const totalImages = images.length; // Mengambil jumlah total gambar
 
+// Fungsi untuk berpindah ke gambar berikutnya
 function nextImage() {
-    currentIndex = (currentIndex + 1) % totalImages;
+    currentIndex = (currentIndex + 1) % totalImages; // Menambahkan 1, dan kembali ke gambar pertama setelah gambar terakhir
     updateCarousel();
 }
 
+// Fungsi untuk berpindah ke gambar sebelumnya
 function prevImage() {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Mengurangi 1, dan kembali ke gambar terakhir setelah gambar pertama
     updateCarousel();
 }
 
+// Fungsi untuk memperbarui posisi carousel sesuai dengan gambar yang sedang aktif
 function updateCarousel() {
     const carousel = document.querySelector('.carousel');
-    carousel.style.transform = `translateX(-${currentIndex * 100 / totalImages}%)`;
+    const offset = -currentIndex * 100 / totalImages; // Menghitung offset untuk geser carousel
+    carousel.style.transform = `translateX(${offset}%)`; // Menggeser carousel sesuai dengan indeks gambar
 }
 
-// Timer untuk berpindah gambar otomatis setiap 5 detik
-setInterval(nextImage, 5000);
-
-// Menambahkan kontrol manual
+// Menambahkan event listener untuk tombol navigasi
 document.querySelector('.next').addEventListener('click', nextImage);
 document.querySelector('.prev').addEventListener('click', prevImage);
 
