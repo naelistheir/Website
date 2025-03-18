@@ -1,100 +1,162 @@
-/* Gaya Umum */
+/* Global Style */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f0f0f0, #d6d6d6);
-    color: #333;
+    background-color: #2C2C2C;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    padding: 50px;
-    height: 100vh;
+}
+
+/* Animasi Teks */
+.animasi-teks {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.muncul {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Header */
+header {
+    background-color: #FFFFFF;
+    padding: 15px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    color: #2C2C2C;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Container */
-.container {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    max-width: 400px;
-    text-align: center;
-}
-
-/* Judul */
 h1 {
-    font-size: 2.5em;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
-    color: #444;
+    color: #2C2C2C;
+    margin: 0;
 }
 
-/* Deskripsi */
-p {
-    font-size: 1.2em;
-    opacity: 0.8;
-    color: #666;
-}
-
-/* Animasi */
-.fade-in {
-    animation: fadeIn 1.5s ease-in-out;
-}
-
-.slide-in {
-    animation: slideIn 1s ease-in-out;
-}
-
-/* Tombol Sosial Media */
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 80%;
-    margin: 10px auto;
-    padding: 12px;
+nav a {
+    color: #2C2C2C;
     text-decoration: none;
-    font-size: 1.2em;
+    margin: 0 15px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #777777;
+}
+
+/* Hero Section */
+.hero {
+    padding: 50px;
+    background: #FFFFFF;
+    border-bottom: 3px solid #CCCCCC;
+    color: #2C2C2C;
+}
+
+/* Layanan Section */
+.layanan {
+    padding: 40px;
+    background: #F5F5F5;
+    color: #2C2C2C;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    color: #2C2C2C;
+}
+
+.card:hover {
+    background: #EAEAEA;
+}
+
+/* Kontak Section */
+.kontak {
+    background: #FFFFFF;
+    padding: 30px;
+    color: #2C2C2C;
+}
+
+.kontak a {
+    color: #2C2C2C;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.kontak a:hover {
+    color: #777777;
+}
+
+/* Formulir Kontak */
+.form-kontak {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.form-kontak input, .form-kontak textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-kontak button {
+    padding: 10px;
+    background-color: #2C2C2C;
     color: white;
-    border-radius: 30px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.btn i {
-    font-size: 1.5em;
+.form-kontak button:hover {
+    background-color: #444444;
 }
 
-/* Warna Tombol */
-.btn:nth-child(1) {
-    background: #25D366; /* WhatsApp */
+/* Footer */
+footer {
+    background: #2C2C2C;
+    padding: 10px;
+    font-size: 14px;
+    color: #FFFFFF;
 }
 
-.btn:nth-child(2) {
-    background: #E1306C; /* Instagram */
-}
+/* Responsive */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.btn:nth-child(3) {
-    background: #000000; /* TikTok */
-}
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
-/* Hover Effect */
-.btn:hover {
-    transform: translateY(-5px);
-}
-
-/* Animasi Keyframes */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideIn {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+    nav {
+        margin-top: 10px;
+    }
 }
