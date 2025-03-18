@@ -20,14 +20,6 @@ body {
     object-fit: cover;
 }
 
-/* Responsif untuk layar kecil (HP) */
-@media (max-width: 768px) {
-    .carousel {
-        width: 90%; /* Kurangi lebar di HP */
-        max-width: 100%;
-    }
-}
-
 .carousel-inner {
     max-width: 100%;
     overflow: hidden;
