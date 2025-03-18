@@ -30,8 +30,6 @@ body {
 /* Style Pop up */
 .popup {
     display: none;
-popup {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -52,17 +50,15 @@ popup {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Pastikan semua elemen dalam popup solid */
-.popup-content, .popup-content * {
-    background-color: inherit !important;
-    opacity: 1 !important; 
+/* Pastikan tidak ada transparansi di dalam elemen popup */
+.popup-content,
+.popup-content * {
+    opacity: 1 !important; /* Menghindari efek transparan */
 }
 
-/* Warna teks agar lebih jelas */
-.popup-content h2 { color: #111; }
-.popup-content p { color: #222; }
+.popup-content h2 { color: #222; }
+.popup-content p { color: #333; }
 
-/* Tombol close */
 .close-btn {
     position: absolute;
     top: 12px;
@@ -70,8 +66,6 @@ popup {
     font-size: 22px;
     cursor: pointer;
     color: #444;
-    background: none;
-    border: none;
 }
 
 .popup button {
