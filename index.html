@@ -16,6 +16,18 @@
             text-align: center;
         }
 
+        /* Animasi Teks */
+        .animasi-teks {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .muncul {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Header */
         header {
             background-color: #FFFFFF;
@@ -55,9 +67,6 @@
             background: #FFFFFF;
             border-bottom: 3px solid #CCCCCC;
             color: #2C2C2C;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-in-out;
         }
 
         /* Layanan Section */
@@ -82,9 +91,6 @@
             transition: 0.3s;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             color: #2C2C2C;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-in-out;
         }
 
         .card:hover {
@@ -96,9 +102,6 @@
             background: #FFFFFF;
             padding: 30px;
             color: #2C2C2C;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-in-out;
         }
 
         .kontak a {
@@ -149,25 +152,6 @@
             color: #FFFFFF;
         }
 
-        /* Animasi Scroll */
-        .show {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-
-        /* Fade-In Animation */
-        .fade-in {
-            opacity: 0;
-            transition: opacity 1s ease-out;
-        }
-
-        /* Slide-Up Animation */
-        .slide-up {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: transform 1s ease-out, opacity 1s ease-out;
-        }
-
         /* Responsive */
         @media (max-width: 768px) {
             .card-container {
@@ -190,46 +174,45 @@
 
     <!-- Header -->
     <header>
-        <h1 class="fade-in">iLyxx Store</h1>
+        <h1 class="animasi-teks">iLyxx Store</h1>
         <nav>
-            <a href="#layanan" class="fade-in">Product</a>
-            <a href="#kontak" class="fade-in">Kontak</a>
+            <a href="#layanan" class="animasi-teks">Layanan</a>
+            <a href="#kontak" class="animasi-teks">Kontak</a>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero slide-up">
-        <h2>Top Up & Jual Beli Akun</h2>
-        <p>Harga murah, proses cepat, dan layanan terbaik hanya di iLyxx Store</p>
+    <section class="hero">
+        <h2 class="animasi-teks">Top Up Game & Akun Terpercaya</h2>
+        <p class="animasi-teks">Harga murah, proses cepat, dan layanan terbaik!</p>
     </section>
 
     <!-- Layanan Section -->
     <section id="layanan" class="layanan">
-        <h2 class="fade-in">Layanan yang Tersedia</h2>
+        <h2 class="animasi-teks">Layanan yang Saya Berikan</h2>
         <div class="card-container">
-            <div class="card fade-in">
-                <h3>Top Up Game</h3>
-                <p>Diamond Mobile Legends, Free Fire, PUBG, dan lainnya.</p>
+            <div class="card">
+                <h3 class="animasi-teks">Top Up Game</h3>
+                <p class="animasi-teks">Diamond Mobile Legends, Free Fire, PUBG, dan lainnya.</p>
             </div>
-            <div class="card fade-in">
-                <h3>Jual Akun</h3>
-                <p>Akun game berkualitas dengan harga terjangkau.</p>
+            <div class="card">
+                <h3 class="animasi-teks">Jual Akun</h3>
+                <p class="animasi-teks">Akun game berkualitas dengan harga terjangkau.</p>
             </div>
-            <div class="card fade-in">
-                <h3>Joki & Boosting</h3>
-                <p>Bantu naik rank dengan aman dan terpercaya.</p>
+            <div class="card">
+                <h3 class="animasi-teks">Joki & Boosting</h3>
+                <p class="animasi-teks">Bantu naik rank dengan aman dan terpercaya.</p>
             </div>
         </div>
     </section>
 
     <!-- Kontak Section -->
     <section id="kontak" class="kontak">
-        <h2 class="fade-in">Kontak Kami</h2>
-        <p>WhatsApp: <a href="https://wa.me/6287875962943" target="_blank">+62 878-7596-2943</a></p>
-        <p>Instagram: <a href="https://instagram.com/aelvyou" target="_blank">@aelvyou</a></p>
+        <h2 class="animasi-teks">Hubungi Saya</h2>
+        <p class="animasi-teks">WhatsApp: <a href="https://wa.me/6287875962943" target="_blank">+62 878-7596-2943</a></p>
 
         <!-- Formulir Kontak -->
-        <form class="form-kontak" onsubmit="kirimPesan(event)">
+        <form class="form-kontak" onsubmit="kirimWhatsApp(event)">
             <input type="text" id="nama" placeholder="Nama Anda" required>
             <input type="email" id="email" placeholder="Email Anda" required>
             <textarea id="pesan" placeholder="Pesan Anda" rows="4" required></textarea>
@@ -239,39 +222,37 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 iLyxx Store. All rights reserved.</p>
+        <p class="animasi-teks">© 2025 iLyxx Store. All rights reserved.</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript untuk Animasi dan WhatsApp -->
     <script>
-        // Animasi saat scroll
-        document.addEventListener("DOMContentLoaded", function () {
-            const elements = document.querySelectorAll(".fade-in, .slide-up");
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll(".animasi-teks");
 
-            function checkScroll() {
-                const triggerBottom = window.innerHeight * 0.85;
+            function cekScroll() {
+                elements.forEach(el => {
+                    const posisi = el.getBoundingClientRect().top;
+                    const tinggiLayar = window.innerHeight;
 
-                elements.forEach((element) => {
-                    const boxTop = element.getBoundingClientRect().top;
-
-                    if (boxTop < triggerBottom) {
-                        element.classList.add("show");
+                    if (posisi < tinggiLayar - 50) {
+                        el.classList.add("muncul");
                     }
                 });
             }
 
-            window.addEventListener("scroll", checkScroll);
-            checkScroll();
+            window.addEventListener("scroll", cekScroll);
+            cekScroll(); 
         });
 
-        // Kirim pesan ke WhatsApp
-        function kirimPesan(event) {
+        function kirimWhatsApp(event) {
             event.preventDefault();
-            var nama = document.getElementById("nama").value;
-            var email = document.getElementById("email").value;
-            var pesan = document.getElementById("pesan").value;
-            var linkWA = `https://wa.me/6287875962943?text=${encodeURIComponent(`Halo, saya ${nama}. Email: ${email}. Pesan: ${pesan}`)}`;
-            window.open(linkWA, "_blank");
+            const nama = document.getElementById("nama").value;
+            const email = document.getElementById("email").value;
+            const pesan = document.getElementById("pesan").value;
+            const nomorWA = "6287875962943";
+            const url = `https://wa.me/${nomorWA}?text=Nama: ${nama}%0AEmail: ${email}%0APesan: ${pesan}`;
+            window.open(url, "_blank");
         }
     </script>
 
