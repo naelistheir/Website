@@ -23,6 +23,7 @@ body {
 
 /* Style untuk kotak popup */
 .popup-content {
+    color: #222; /* Warna teks hitam elegan */
     background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Gradasi putih ke abu muda */
     padding: 20px;
     border-radius: 10px;
