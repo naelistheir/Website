@@ -89,6 +89,153 @@ nav a:hover {
     background: #EAEAEA;
 }
 
+/* Pricing Section */
+.pricing {
+    padding: 50px;
+    background: #FFFFFF;
+    text-align: center;
+    color: #2C2C2C;
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: #F5F5F5;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card h3 {
+    font-size: 24px;
+}
+
+.pricing-card p {
+    font-size: 18px;
+}
+
+.pricing-card button {
+    padding: 10px;
+    background-color: #2C2C2C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px;
+    background: #F5F5F5;
+    text-align: center;
+    color: #2C2C2C;
+}
+
+.testimonials h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Upcoming Features Section */
+.upcoming {
+    padding: 50px;
+    background: #FFFFFF;
+    color: #2C2C2C;
+    text-align: center;
+}
+
+.upcoming-item {
+    margin-bottom: 30px;
+}
+
+.upcoming-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.upcoming-item p {
+    font-size: 16px;
+}
+
+/* Product Showcase Section */
+.products {
+    padding: 50px;
+    background: #F5F5F5;
+    text-align: center;
+    color: #2C2C2C;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 250px;
+    text-align: center;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+.product button {
+    padding: 10px;
+    background-color: #2C2C2C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    }
+
 /* Kontak Section */
 .kontak {
     background: #FFFFFF;
