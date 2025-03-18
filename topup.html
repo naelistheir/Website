@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Game - iLyxx Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Form Top Up Game</h1>
+    </header>
+
+    <section class="form-section">
+        <h2>Isi Formulir Top Up</h2>
+        <form class="form-topup" onsubmit="prosesTopUp(event)">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" placeholder="Nama Anda" required>
+
+            <label for="idGame">ID Game:</label>
+            <input type="text" id="idGame" placeholder="Masukkan ID Game" required>
+
+            <label for="jumlah">Jumlah Diamond/Koin:</label>
+            <select id="jumlah">
+                <option value="50">50 Diamond</option>
+                <option value="100">100 Diamond</option>
+                <option value="250">250 Diamond</option>
+                <option value="500">500 Diamond</option>
+            </select>
+
+            <label for="metode">Metode Pembayaran:</label>
+            <select id="metode">
+                <option value="Dana">Dana</option>
+                <option value="OVO">OVO</option>
+                <option value="Gopay">Gopay</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+            </select>
+
+            <button type="submit">Proses Top Up</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2025 iLyxx Store. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
