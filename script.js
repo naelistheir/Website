@@ -1,11 +1,27 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const container = document.querySelector(".container");
-    
-    container.addEventListener("mouseover", function() {
-        container.style.transform = "scale(1.05)";
-    });
+    const elements = document.querySelectorAll(".animasi-teks");
 
-    container.addEventListener("mouseout", function() {
-        container.style.transform = "scale(1)";
-    });
+    function cekScroll() {
+        elements.forEach(el => {
+            const posisi = el.getBoundingClientRect().top;
+            const tinggiLayar = window.innerHeight;
+
+            if (posisi < tinggiLayar - 50) {
+                el.classList.add("muncul");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", cekScroll);
+    cekScroll(); 
 });
+
+function kirimWhatsApp(event) {
+    event.preventDefault();
+    const nama = document.getElementById("nama").value;
+    const email = document.getElementById("email").value;
+    const pesan = document.getElementById("pesan").value;
+    const nomorWA = "6287875962943";
+    const url = `https://wa.me/${nomorWA}?text=Nama: ${nama}%0AEmail: ${email}%0APesan: ${pesan}`;
+    window.open(url, "_blank");
+}
