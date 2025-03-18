@@ -21,12 +21,7 @@ body {
 }
 
 .popup-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
-    position: relative;
+    background: linear-gradient(to bottom, #dddddd, #ffffff); /* Gradasi abu-abu ke putih */
 }
 
 .close-btn {
