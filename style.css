@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #ff8c00;
+    color: white;
+    padding: 20px;
+}
+
+.hero {
+    padding: 50px;
+    background-color: white;
+}
+
+.about, .contact {
+    padding: 30px;
+    background-color: #fff3e0;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact li {
+    margin: 10px 0;
+}
+
+.contact a {
+    text-decoration: none;
+    color: #ff8c00;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #ff8c00;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
