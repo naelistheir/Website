@@ -16,6 +16,33 @@ document.addEventListener("DOMContentLoaded", function() {
     cekScroll(); 
 });
 
+// Menambahkan fungsi untuk mengontrol slide secara manual
+let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-img');
+const totalImages = images.length;
+
+function nextImage() {
+    currentIndex = (currentIndex + 1) % totalImages;
+    updateCarousel();
+}
+
+function prevImage() {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const carousel = document.querySelector('.carousel');
+    carousel.style.transform = `translateX(-${currentIndex * 100 / totalImages}%)`;
+}
+
+// Timer untuk berpindah gambar otomatis setiap 5 detik
+setInterval(nextImage, 5000);
+
+// Menambahkan kontrol manual
+document.querySelector('.next').addEventListener('click', nextImage);
+document.querySelector('.prev').addEventListener('click', prevImage);
+
 function kirimWhatsApp(event) {
     event.preventDefault();
     const nama = document.getElementById("nama").value;
