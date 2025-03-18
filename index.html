@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #2A2A2A, #3D3D3D); /* Abu-abu gradasi */
+            background: linear-gradient(135deg, #2A2A2A, #3D3D3D);
             color: #FFFFFF;
             margin: 0;
             padding: 0;
@@ -33,19 +33,23 @@
         }
 
         /* Navigasi */
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
         nav a {
             color: #2C2C2C;
             text-decoration: none;
-            margin: 0 15px;
             font-weight: bold;
             transition: 0.3s ease-in-out;
         }
 
         nav a:hover {
-            color: #777777; /* Abu-abu muda */
+            color: #777777;
         }
 
-        /* Hero section */
+        /* Hero Section */
         .hero {
             padding: 50px;
             background: #FFFFFF;
@@ -83,7 +87,6 @@
             flex-wrap: wrap;
         }
 
-        /* Card lebih modern */
         .card {
             background: #FFFFFF;
             padding: 20px;
@@ -124,6 +127,33 @@
             padding: 10px;
             font-size: 14px;
             color: #FFFFFF;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .hero {
+                padding: 30px;
+            }
+
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+                max-width: 300px;
+            }
         }
     </style>
 </head>
