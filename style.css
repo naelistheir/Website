@@ -83,25 +83,12 @@ nav a:hover {
     transition: 0.3s;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     color: #2C2C2C;
+    cursor: pointer; /* Menambahkan efek pointer saat hover */
 }
 
 .card:hover {
     background: #EAEAEA;
-}
-
-.btn-topup {
-    display: inline-block;
-    background: #2C2C2C;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.btn-topup:hover {
-    background: #444444;
+    transform: scale(1.05); /* Sedikit membesar saat hover */
 }
 
 /* Form Top Up */
