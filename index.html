@@ -30,12 +30,15 @@
     </header>
     
     <!-- Carousel Banner -->
-        <div class="carousel-container">
-            <div class="carousel">
-                <!-- Ganti dengan path gambar banner Anda -->
-                <img src="images/banner.jpg" alt="Banner 1" class="carousel-img">
-            </div>
-        </div>
+        <div class="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" style="background-image: url('images/slide1.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('images/slide2.jpg');"></div>
+        <div class="carousel-item" style="background-image: url('images/slide3.jpg');"></div>
+    </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
     
     <!-- Hero Section -->
     <section class="hero">
