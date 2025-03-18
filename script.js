@@ -1,7 +1,3 @@
-window.onload = function() {
-        document.getElementById("popup").style.display = "flex";
-    };
-
 function closePopup() {
     document.querySelector(".popup").style.display = "none";
 }
