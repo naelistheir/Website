@@ -1,7 +1,8 @@
+/* Gaya Umum */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #007bff, #00d4ff);
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f0f0f0, #d6d6d6);
+    color: #333;
     text-align: center;
     padding: 50px;
     height: 100vh;
@@ -12,27 +13,33 @@ body {
     overflow: hidden;
 }
 
+/* Container */
 .container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
+    background: white;
+    padding: 30px;
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
+    max-width: 400px;
+    text-align: center;
 }
 
+/* Judul */
 h1 {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #444;
 }
 
+/* Deskripsi */
 p {
     font-size: 1.2em;
     opacity: 0.8;
+    color: #666;
 }
 
-/* Animasi masuk */
+/* Animasi */
 .fade-in {
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -41,30 +48,44 @@ p {
     animation: slideIn 1s ease-in-out;
 }
 
-/* Tombol */
+/* Tombol Sosial Media */
 .btn {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 12px;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
     color: white;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.btn i {
+    font-size: 1.5em;
+}
+
+/* Warna Tombol */
+.btn:nth-child(1) {
+    background: #25D366; /* WhatsApp */
+}
+
+.btn:nth-child(2) {
+    background: #E1306C; /* Instagram */
+}
+
+.btn:nth-child(3) {
+    background: #000000; /* TikTok */
+}
+
+/* Hover Effect */
 .btn:hover {
     transform: translateY(-5px);
-}
-
-.zoom-in {
-    background: #ff4081;
-    animation: zoomIn 0.8s ease-in-out;
-}
-
-.zoom-in:hover {
-    background: #d81b60;
 }
 
 /* Animasi Keyframes */
@@ -76,9 +97,4 @@ p {
 @keyframes slideIn {
     from { transform: translateY(-50px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes zoomIn {
-    from { transform: scale(0.8); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
 }
