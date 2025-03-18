@@ -89,6 +89,63 @@ nav a:hover {
     background: #EAEAEA;
 }
 
+.btn-topup {
+    display: inline-block;
+    background: #2C2C2C;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-topup:hover {
+    background: #444444;
+}
+
+/* Form Top Up */
+.form-section {
+    background: #FFFFFF;
+    padding: 40px;
+    color: #2C2C2C;
+    text-align: center;
+}
+
+.form-topup {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.form-topup label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form-topup input, .form-topup select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-topup button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #2C2C2C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-topup button:hover {
+    background-color: #444444;
+}
+
 /* Kontak Section */
 .kontak {
     background: #FFFFFF;
