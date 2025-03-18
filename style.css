@@ -50,12 +50,6 @@ body {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Pastikan tidak ada transparansi di dalam elemen popup */
-.popup-content,
-.popup-content * {
-    opacity: 1 !important; /* Menghindari efek transparan */
-}
-
 .popup-content h2 { color: #222; }
 .popup-content p { color: #333; }
 
