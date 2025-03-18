@@ -53,6 +53,38 @@ nav a:hover {
     color: #777777;
 }
 
+/* Style untuk Carousel */
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px; /* Menambahkan spasi bawah */
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Animasi untuk Auto-Slide */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+.carousel-slide {
+    animation: slide 9s infinite;
+}
+
 /* Hero Section */
 .hero {
     padding: 50px;
