@@ -9,22 +9,45 @@ body {
 }
 
 /* Carousel Container */
-.carousel-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto; /* Otomatis mengikuti tinggi gambar */
-}
-
-/* Carousel Gambar */
 .carousel {
+    position: relative;
+    width: 80%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-inner {
     display: flex;
-    width: 300%; /* 3 gambar, sehingga lebarnya 3x lebar container */
-    transition: transform 0.5s ease; /* Tambahkan transisi untuk gerakan gambar */
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Background overlay popup */
