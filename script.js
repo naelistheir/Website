@@ -20,32 +20,27 @@ document.addEventListener("DOMContentLoaded", function() {
     cekScroll(); 
 });
 
-let currentIndex = 0; // Menyimpan indeks gambar yang sedang ditampilkan
-const images = document.querySelectorAll('.carousel-img'); // Mengambil semua gambar di carousel
-const totalImages = images.length; // Mengambil jumlah total gambar
+let currentIndex = 0;
+const slides = document.querySelectorAll(".carousel-item");
+const totalSlides = slides.length;
 
-// Fungsi untuk berpindah ke gambar berikutnya
-function nextImage() {
-    currentIndex = (currentIndex + 1) % totalImages; // Menambahkan 1, dan kembali ke gambar pertama setelah gambar terakhir
-    updateCarousel();
+function updateSlide() {
+    const carouselInner = document.querySelector(".carousel-inner");
+    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-// Fungsi untuk berpindah ke gambar sebelumnya
-function prevImage() {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Mengurangi 1, dan kembali ke gambar terakhir setelah gambar pertama
-    updateCarousel();
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlide();
 }
 
-// Fungsi untuk memperbarui posisi carousel sesuai dengan gambar yang sedang aktif
-function updateCarousel() {
-    const carousel = document.querySelector('.carousel');
-    const offset = -currentIndex * 100 / totalImages; // Menghitung offset untuk geser carousel
-    carousel.style.transform = `translateX(${offset}%)`; // Menggeser carousel sesuai dengan indeks gambar
+function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlide();
 }
 
-// Menambahkan event listener untuk tombol navigasi
-document.querySelector('.next').addEventListener('click', nextImage);
-document.querySelector('.prev').addEventListener('click', prevImage);
+// Auto-slide setiap 3 detik
+setInterval(nextSlide, 3000);
 
 function kirimWhatsApp(event) {
     event.preventDefault();
