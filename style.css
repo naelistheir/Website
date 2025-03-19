@@ -172,13 +172,13 @@ nav a:hover {
 }
 
 .card {
-    background: #FFFFFF;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    transition: 0.3s;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    color: #2C2C2C;
+  width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  background: white;
+  border: 3px solid transparent;
+  background-clip: padding-box, border-box;
+  background-image: linear-gradient(white, white), linear-gradient(45deg, #ff7eb3, #ff758c);
 }
 
 .card:hover {
