@@ -40,3 +40,10 @@ function kirimWhatsApp(event) {
     const url = `https://wa.me/${nomorWA}?text=Nama: ${nama}%0AEmail: ${email}%0APesan: ${pesan}`;
     window.open(url, "_blank");
 }
+
+const chatBtn = document.getElementById('chat-btn');
+const chatBox = document.getElementById('chat-box');
+
+chatBtn.addEventListener('click', () => {
+    chatBox.classList.toggle('hide');
+});
