@@ -347,7 +347,33 @@ nav a:hover {
     border: none;
     cursor: pointer;
     margin-top: 20px;
-    }
+}
+
+#chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+#chat-box {
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    width: 250px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+.hide { display: none; }
 
 /* Kontak Section */
 .kontak {
