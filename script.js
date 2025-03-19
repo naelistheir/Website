@@ -2,22 +2,21 @@ function closePopup() {
     document.querySelector(".popup").style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const elements = document.querySelectorAll(".animasi-teks");
+document.addEventListener("DOMContentLoaded", function () {
+    let elements = document.querySelectorAll(".animasi-teks");
 
-    function cekScroll() {
+    function checkScroll() {
+        let scrollPos = window.innerHeight * 0.85;
         elements.forEach(el => {
-            const posisi = el.getBoundingClientRect().top;
-            const tinggiLayar = window.innerHeight;
-
-            if (posisi < tinggiLayar - 50) {
-                el.classList.add("muncul");
+            let position = el.getBoundingClientRect().top;
+            if (position < scrollPos) {
+                el.classList.add("show");
             }
         });
     }
 
-    window.addEventListener("scroll", cekScroll);
-    cekScroll(); 
+    window.addEventListener("scroll", checkScroll);
+    checkScroll();
 });
 
 let index = 0;
