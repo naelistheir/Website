@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 let index = 0;
-const slides = document.querySelectorAll(".carousel-inner img");
+const slides = document.querySelectorAll(".banner-img");
 
 function nextSlide() {
     index = (index + 1) % slides.length;
