@@ -216,36 +216,42 @@ nav a:hover {
 
 /* Styling untuk Card */
 .card {
-    background: linear-gradient(145deg, #f5f5f5, #e0e0e0);
-    border-radius: 15px;
+    background: linear-gradient(145deg, #2d2d2d, #3b3b3b); /* Abu gelap ke abu muda */
+    color: #fff;
+    border-radius: 16px; /* Bikin lebih smooth */
     padding: 20px;
-    color: #333; /* Warna teks abu gelap */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), 
+                -5px -5px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     text-align: center;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), 
-                -4px -4px 10px rgba(255, 255, 255, 0.7); /* Efek embossed */
-    transition: all 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
-    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Hover efek sedikit naik */
+/* Efek Hover Premium */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px); /* Naik sedikit */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.5), 
+                -8px -8px 20px rgba(255, 255, 255, 0.2);
 }
 
-/* Warna teks judul */
-.card h3 {
-    color: #222; /* Abu tua */
+/* Tambahan efek highlight premium */
+.card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 10%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* Warna teks isi */
-.card p {
-    color: #555; /* Abu sedang */
-    font-size: 14px;
-    line-height: 1.5;
+.card:hover::before {
+    opacity: 1;
 }
+
 /* Efek wave untuk teks */
 @keyframes wave {
     0%, 100% { transform: translateY(0px); }
