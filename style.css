@@ -215,38 +215,36 @@ nav a:hover {
 }
 
 /* Styling untuk Card */
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: 1 kolom */
+    gap: 20px; /* Jarak antar card */
+    max-width: 800px; /* Supaya tidak terlalu melebar */
+    margin: auto;
+}
+
+/* Untuk tampilan lebih besar (Desktop) */
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    }
+}
+
 .card {
-    background: linear-gradient(145deg, #f5f5f5, #ffffff); /* Abu muda ke putih */
-    color: #2c2c2c; /* Warna teks gelap untuk kontras */
-    border-radius: 12px; /* Sudut sedikit melengkung biar lebih soft */
+    background: linear-gradient(145deg, #f5f5f5, #ffffff);
+    color: #2c2c2c;
+    border-radius: 12px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), 
-                -4px -4px 10px rgba(255, 255, 255, 0.7); /* Efek timbul */
+                -4px -4px 10px rgba(255, 255, 255, 0.7);
     padding: 20px;
+    text-align: center;
     transition: 0.3s ease-in-out;
 }
 
-/* Efek hover biar lebih interaktif */
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15), 
                 -6px -6px 15px rgba(255, 255, 255, 0.8);
-}
-
-/* Tambahan efek highlight premium */
-.card::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.15) 10%, transparent 80%);
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.card:hover::before {
-    opacity: 1;
 }
 
 /* Efek wave untuk teks */
@@ -507,11 +505,6 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     header {
         flex-direction: column;
         text-align: center;
