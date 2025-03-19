@@ -216,37 +216,36 @@ nav a:hover {
 
 /* Styling untuk Card */
 .card {
-    background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Gradasi hitam ke abu */
+    background: linear-gradient(145deg, #f0f0f0, #d9d9d9); /* Gradasi abu muda */
     border-radius: 15px;
     padding: 20px;
-    color: #ffffff;
+    color: #333; /* Warna teks abu gelap */
     text-align: center;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow soft */
-    transition: all 0.4s ease-in-out;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), 
+                -4px -4px 10px rgba(255, 255, 255, 0.7); /* Efek embossed */
+    transition: all 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
-    border: 2px solid transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* Hover efek glowing */
+/* Hover efek sedikit naik */
 .card:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Warna teks untuk tiap layanan */
-.card:nth-child(1) h3 { color: #ffcc00; } /* Kuning untuk Top Up Game */
-.card:nth-child(2) h3 { color: #ff4444; } /* Merah untuk Jual Akun */
-.card:nth-child(3) h3 { color: #00c8ff; } /* Biru untuk Jasa Joki */
+/* Warna teks judul */
+.card h3 {
+    color: #222; /* Abu tua */
+}
 
-/* Efek teks lebih hidup */
+/* Warna teks isi */
 .card p {
-    color: rgba(255, 255, 255, 0.8);
+    color: #555; /* Abu sedang */
     font-size: 14px;
     line-height: 1.5;
 }
-
 /* Efek wave untuk teks */
 @keyframes wave {
     0%, 100% { transform: translateY(0px); }
