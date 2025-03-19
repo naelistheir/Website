@@ -21,14 +21,15 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 let index = 0;
-const slides = document.querySelectorAll(".banner-img");
+const slides = document.querySelectorAll('.banner-img');
 
 function nextSlide() {
-    index = (index + 1) % slides.length;
-    document.querySelector(".carousel-inner").style.transform = `translateX(-${index * 100}%)`;
+    slides[index].classList.remove('active'); // Sembunyikan gambar sekarang
+    index = (index + 1) % slides.length; // Pindah ke gambar berikutnya
+    slides[index].classList.add('active'); // Tampilkan gambar baru
 }
 
-setInterval(nextSlide, 3000); // Ganti slide setiap 3 detik
+setInterval(nextSlide, 3000); // Ganti gambar setiap 3 detik
 
 function kirimWhatsApp(event) {
     event.preventDefault();
