@@ -20,27 +20,15 @@ document.addEventListener("DOMContentLoaded", function() {
     cekScroll(); 
 });
 
-let currentIndex = 0;
-const slides = document.querySelectorAll(".carousel-item");
-const totalSlides = slides.length;
-
-function updateSlide() {
-    const carouselInner = document.querySelector(".carousel-inner");
-    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+let index = 0;
+const slides = document.querySelectorAll(".carousel-inner img");
 
 function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateSlide();
+    index = (index + 1) % slides.length;
+    document.querySelector(".carousel-inner").style.transform = `translateX(-${index * 100}%)`;
 }
 
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateSlide();
-}
-
-// Auto-slide setiap 3 detik
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 3000); // Ganti slide setiap 3 detik
 
 function kirimWhatsApp(event) {
     event.preventDefault();
