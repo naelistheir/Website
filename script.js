@@ -29,7 +29,13 @@ function nextSlide() {
     slides.style.transform = `translateX(-${index * 100}%)`;
 }
 
-setInterval(nextSlide, 3000); // Ganti gambar setiap 3 detik
+// Jalankan slide otomatis
+setInterval(nextSlide, 3000);
+
+// Pastikan ukuran gambar menyesuaikan ukuran container
+window.addEventListener("resize", () => {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+});
 
 function kirimWhatsApp(event) {
     event.preventDefault();
