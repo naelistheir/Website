@@ -9,13 +9,25 @@ body {
 }
 
 /* Carousel Container */
-banner-container {
+.banner-container {
     width: 100%;
-    height: 300px; /* Sesuaikan tinggi agar tetap landscape */
-    background-image: url('images/slide1.jpg'); /* Ganti dengan gambar yang kamu pakai */
-    background-size: cover; /* Menyesuaikan gambar agar penuh */
-    background-position: center; /* Fokus ke bagian tengah */
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Supaya tidak ada scroll */
+}
+
+.banner-img {
+    width: 100%;
+    max-height: 300px; /* Sesuaikan tinggi untuk landscape */
+    object-fit: cover; /* Pastikan gambar tetap rapi */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .banner-img {
+        max-height: 200px; /* Sesuaikan ukuran di mobile */
+    }
 }
 
 /* Responsif untuk layar kecil */
@@ -24,56 +36,6 @@ banner-container {
         height: 200px; /* Sesuaikan tinggi untuk mobile */
         background-position: center top; /* Fokus ke bagian atas jika perlu */
     }
-}
-
-.carousel {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-}
-
-.carousel-inner {
-    display: flex;
-    width: 300%; /* Untuk menampung semua gambar */
-    transition: transform 0.5s ease-in-out;
-}
-
-.banner-img {
-    width: 100%;
-    flex: 1 0 100%;
-    aspect-ratio: 16 / 9; /* Agar tetap landscape */
-    object-fit: cover; /* Agar tidak terdistorsi */
-}
-
-.carousel-inner img {
-    width: 100%;
-    flex: 1 0 100%;
-}
-.carousel-item {
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-}
-
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 5px;
-}
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.prev:hover, .next:hover {
-    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Background overlay popup */
