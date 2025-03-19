@@ -121,12 +121,6 @@ button:hover {
     background: #444;
 }
 
-/* Animasi Teks */
-.muncul {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 /* Header */
 header {
     background-color: #FFFFFF;
@@ -173,7 +167,6 @@ nav a:hover {
     font-size: 28px;
     font-weight: bold;
     color: white;
-    background: #000;
     padding: 10px;
     text-transform: uppercase;
     display: inline-block;
@@ -221,37 +214,37 @@ nav a:hover {
     transform: translateY(0) scale(1);
 }
 
-/* Efek hover glowing */
+/* Styling untuk Card */
 .card {
-    background: linear-gradient(135deg, #222, #3D3D3D);
-    border-radius: 12px;
+    background: linear-gradient(135deg, #1e1e1e, #2a2a2a); /* Gradasi hitam ke abu */
+    border-radius: 15px;
     padding: 20px;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Shadow soft */
     transition: all 0.4s ease-in-out;
     position: relative;
     overflow: hidden;
     border: 2px solid transparent;
 }
 
+/* Hover efek glowing */
 .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Efek glitch ringan di judul */
-@keyframes glitch {
-    0% { text-shadow: 0px 0px 5px #fff; }
-    25% { text-shadow: -2px -2px 8px #ff00ff; }
-    50% { text-shadow: 2px 2px 8px #00ffff; }
-    75% { text-shadow: -2px 2px 8px #ffff00; }
-    100% { text-shadow: 2px -2px 8px #ff0000; }
-}
+/* Warna teks untuk tiap layanan */
+.card:nth-child(1) h3 { color: #ffcc00; } /* Kuning untuk Top Up Game */
+.card:nth-child(2) h3 { color: #ff4444; } /* Merah untuk Jual Akun */
+.card:nth-child(3) h3 { color: #00c8ff; } /* Biru untuk Jasa Joki */
 
-.animasi-glitch {
-    animation: glitch 1.5s infinite alternate;
+/* Efek teks lebih hidup */
+.card p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 /* Efek wave untuk teks */
