@@ -174,20 +174,32 @@ nav a:hover {
     color: #2C2C2C;
 }
 
-/* Promo Marque */
+/* Promo Marquee Aesthetic */
 .promo-marquee {
-    background: linear-gradient(90deg, #2C2C2C, #444444);
-    color: white;
-    padding: 10px 0;
-    font-weight: bold;
-    text-align: center;
+    background: #1a1a1a;
+    padding: 12px 0;
     overflow: hidden;
     white-space: nowrap;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
-.promo-marquee p {
+
+.promo-marquee span {
     display: inline-block;
-    animation: marquee 10s linear infinite;
+    padding-left: 100%;
+    animation: marquee 12s linear infinite;
+    background: linear-gradient(45deg, #ffffff, #b3b3b3, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.8);
 }
+
 @keyframes marquee {
     from {
         transform: translateX(100%);
