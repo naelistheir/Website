@@ -1,8 +1,10 @@
 /* Global Style */
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #2C2C2C;
-    color: #FFFFFF;
+    font-size: 16px; /* Ukuran font yang lebih besar untuk desktop */
+    line-height: 1.5;
+    background: rgba(255, 255, 255, 0.5); /* Putih transparan dengan 50% opacity */
+    color: #333; /* Teks gelap untuk kontras */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -154,64 +156,232 @@ nav a:hover {
     color: #777777;
 }
 
-/* Hero Section */
-.hero {
-    padding: 50px;
-    background: #FFFFFF;
-    border-bottom: 3px solid #CCCCCC;
-    color: #2C2C2C;
-}
-
 /* Promo Kedap-Kedip */
-.flash-sale {
-    font-size: 24px;
-    font-weight: bold;
+.promo-countdown {
     text-align: center;
-    color: #fff;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.6);
-    margin: 20px auto;
-    display: inline-block;
-    animation: flash 1.5s infinite alternate;
+    font-family: 'Roboto', sans-serif;
+    background: #f0f0f0; /* Background abu muda */
+    border-radius: 12px;
+    padding: 30px;
+    color: #333; /* Teks utama abu gelap */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
 }
 
-/* Animasi Blink */
-@keyframes flash {
+.countdown-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #666; /* Warna teks abu gelap untuk judul */
+    animation: fadeIn 1s ease;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.time-block {
+    background: #ffffff; /* Latar belakang putih untuk waktu */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.time {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333; /* Angka abu gelap */
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.label {
+    font-size: 1rem;
+    color: #888; /* Label abu lebih terang */
+    margin-top: 5px;
+    text-transform: uppercase;
+}
+
+.time-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
     0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
         opacity: 1;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    }
-    100% {
-        opacity: 0.3;
-        text-shadow: 0 0 20px rgba(255, 255, 255, 1);
+        transform: translateY(0);
     }
 }
 
-/* Efek Glitch */
-.glitch {
-    position: relative;
-    display: inline-block;
-    animation: glitch 1s infinite;
+/* Kontainer filter */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-@keyframes glitch {
-    0% {
-        transform: translate(0);
-    }
-    20% {
-        transform: translate(-2px, 2px);
-    }
-    40% {
-        transform: translate(-2px, -2px);
-    }
-    60% {
-        transform: translate(2px, 2px);
-    }
-    80% {
-        transform: translate(2px, -2px);
-    }
-    100% {
-        transform: translate(0);
-    }
+/* Gaya untuk setiap filter */
+.filter-item {
+    background: #f8f8f8;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.filter-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.filter-item label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+    transition: all 0.3s ease;
+}
+
+.filter-item select, .filter-item input[type="range"] {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.filter-item select:focus, .filter-item input[type="range"]:focus {
+    border-color: #6c63ff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+}
+
+/* Harga - Range slider */
+#price-filter {
+    background: linear-gradient(90deg, rgba(108, 99, 255, 0.2) 0%, rgba(108, 99, 255, 1) 100%);
+    height: 8px;
+    border-radius: 8px;
+    /* -webkit-appearance: none; */
+    transition: background-color 0.3s ease;
+}
+
+#price-filter:hover {
+    background: linear-gradient(90deg, rgba(108, 99, 255, 0.3) 0%, rgba(108, 99, 255, 1) 100%);
+}
+
+#price-filter::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #6c63ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#price-filter::-webkit-slider-thumb:hover {
+    background-color: #5a54e7;
+}
+
+/* Tampilan harga yang dipilih */
+#price-value {
+    font-weight: bold;
+    color: #6c63ff;
+    margin-top: 10px;
+}
+
+/* Rating - Select */
+#rating-filter {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+}
+
+#rating-filter:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 10px rgba(108, 99, 255, 0.2);
+}
+
+/* Tampilan label dan input yang lebih rapi */
+.filter-item select, .filter-item input[type="range"] {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Gaya hover untuk elemen input */
+.filter-item select:hover, .filter-item input[type="range"]:hover {
+    background-color: #f3f3f3;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya untuk Produk */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    width: calc(33% - 20px); /* 3 produk per baris */
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product:hover {
+    transform: translateY(-10px); /* Efek hover untuk kedalaman */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #888;
+    margin: 10px 0;
+}
+
+.product-rating {
+    font-size: 1rem;
+    color: #f39c12;
 }
 
 /* Layanan Section */
@@ -226,13 +396,12 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  max-width: 100%;
+  padding: 15px;
   margin: 0 auto;
-  max-width: 1200px;
   background-color: #f9f9f9;
 }
 
-/* Card container */
 /* Efek masuk smooth saat scroll */
 .animasi-teks {
     opacity: 0;
@@ -248,17 +417,9 @@ nav a:hover {
 /* Styling untuk Card */
 .card-container {
     display: grid;
-    grid-template-columns: 1fr; /* Default: 1 kolom */
-    gap: 20px; /* Jarak antar card */
-    max-width: 800px; /* Supaya tidak terlalu melebar */
-    margin: auto;
-}
-
-/* Untuk tampilan lebih besar (Desktop) */
-@media (min-width: 768px) {
-    .card-container {
-        grid-template-columns: repeat(3, 1fr); /* 3 kolom */
-    }
+    grid-template-columns: repeat(3, 1fr); /* Menampilkan 3 kolom */
+    gap: 50px; /* Jarak antar card */
+    justify-items: center; /* Menempatkan card di tengah */
 }
 
 .card {
@@ -270,6 +431,19 @@ nav a:hover {
     padding: 20px;
     text-align: center;
     transition: 0.3s ease-in-out;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom pada tablet */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 1 kolom pada ponsel */
+    }
 }
 
 .card:hover {
@@ -287,47 +461,6 @@ nav a:hover {
 .animasi-wave {
     display: inline-block;
     animation: wave 1s ease-in-out infinite;
-}
-
-/* Pricing Section */
-.pricing {
-    padding: 50px;
-    background: #FFFFFF;
-    text-align: center;
-    color: #2C2C2C;
-}
-
-.pricing-container {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.pricing-card {
-    background: #F5F5F5;
-    padding: 30px;
-    border-radius: 10px;
-    width: 250px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease-in-out;
-}
-
-.pricing-card h3 {
-    font-size: 24px;
-}
-
-.pricing-card p {
-    font-size: 18px;
-}
-
-.pricing-card button {
-    padding: 10px;
-    background-color: #2C2C2C;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
 }
 
 /* Ulasan Section */
@@ -451,7 +584,58 @@ footer {
 }
 
 /* Responsive */
+@media (max-width: 480px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 1 kolom untuk perangkat Android dengan layar kecil */
+    }
+}
+
 @media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Menyesuaikan ukuran font di perangkat mobile */
+      }
+    
+    .container {
+    padding: 10px; /* Mengurangi padding untuk mengoptimalkan ruang */
+    }
+
+    .header, .footer {
+    padding: 10px 0;
+    text-align: center; /* Menyesuaikan header/footer untuk mobile */
+    }
+
+    .main-content {
+    padding: 20px 10px;
+    font-size: 14px;
+    }
+
+    .filter-item {
+        width: 100%;
+    }
+
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+    }
+
+    .card {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    
+      /* Menghilangkan kolom dua atau grid, dan menggunakan tampilan satu kolom */
+      .columns {
+        display: block;
+        width: 100%;
+      }
+    
+      /* Mengubah tombol supaya pas di layar kecil */
+      .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+      }
+
     header {
         flex-direction: column;
         text-align: center;
