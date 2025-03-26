@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff" id="themeColorMeta">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <title>iLyxx Store - Setup Server & Design</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tambahan style biar makin kekinian */
+        .slang {
+            color: #4361ee;
+            font-weight: 600;
+        }
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">iLyxx<span>Store</span></a>
+            <div class="nav-links">
+                <a href="#home"><i class="fas fa-home emoji"></i>Home</a>
+                <a href="#services"><i class="fas fa-cogs emoji"></i>Layanan</a>
+                <a href="#link"><i class="fas fa-user emoji"></i>Link</a>
+                <a href="#contact" class="cta-button"><i class="fas fa-paper-plane emoji"></i>Kontak</a>
+            </div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+        </button>    
+        <div class="visitor-counter">
+            <i class="fas fa-users"></i>
+            <span id="live-counter">0</span> visitors
+        </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div id="particles-js" class="particles-background"></div>
+    <div class="content-over-particles">
+    <!-- Hero Section -->
+    <section id="home" class="hero text-center">
+        <div class="container">
+            <div class="hero-content centered-content">
+                <h1>iLyxx Store <span class="slang">Area</span></h1>
+                <p>Kami specialize di <span class="slang">coding server, setup server, dan design</span> udah 2 tahun lebih. Project lo aman di kita!</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="secondary-btn"><i class="fas fa-eye emoji"></i>Explore Project</a>
+                </div>
+            </div>
+        </div>
+            <!-- Music Player -->
+        <div class="music-player">
+            <audio id="bgMusic" loop>
+                <source src="assets/music/background.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+            <button id="musicToggle" class="music-btn">
+                <i class="fas fa-music"></i>
+                <span class="music-text">Memuat Musik...</span>
+            </button>
+        </div>
+    </section>
+
+<!-- Layanan -->
+<section id="services" class="services">
+    <div class="container">
+        <div class="section-header">
+            <h2>Layanan yang <span class="slang">Tersedia</span></h2>
+            <p>Pilih yang lo butuhin, kita handle sampe beres!</p>
+        </div>
+        <div class="services-grid">
+            <!-- Service Card 1 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Coding Server</h3>
+                <p>Membuat server mu semakin menarik <span class="slang">clean & fast</span> selalu ter-update</p>
+                
+                <!-- Order Button -->
+                <button class="order-btn">Order Sekarang</button>
+                
+                <!-- Payment Options (Hidden Initially) -->
+                <div class="payment-options" style="display: none;">
+                    <h4>Metode Pembayaran:</h4>
+                    <div class="payment-methods">
+                        <button class="payment-method" data-method="qris">
+                            <i class="fas fa-qrcode"></i> QRIS
+                        </button>
+                        <button class="payment-method" data-method="gopay">
+                            <i class="fab fa-google-pay"></i> Gopay
+                        </button>
+                        <button class="payment-method" data-method="dana">
+                            <i class="fas fa-wallet"></i> DANA
+                        </button>
+                    </div>
+                    
+                    <!-- QR Container -->
+                    <div class="qr-container" style="display: none;">
+                        <img src="" alt="QR Code" class="qr-code">
+                        <div class="qr-actions">
+                            <!-- Download Button -->
+                            <button class="download-qr-btn">
+                                <i class="fas fa-download"></i> Download QR
+                            </button>
+                            <!-- WhatsApp Confirmation -->
+                            <a href="https://wa.me/6287875962943?text=Saya%20sudah%20melakukan%20pembayaran" 
+                               class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Konfirmasi Pembayaran
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Card 2 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Setup Server GTPS</h3>
+                <p>Server GTPS lo kita bantu setup dengan mudah, <span class="slang">ready up</span> dan cepat!</p>
+                
+                <button class="order-btn">Order Sekarang</button>
+                
+                <div class="payment-options" style="display: none;">
+                    <h4>Metode Pembayaran:</h4>
+                    <div class="payment-methods">
+                        <button class="payment-method" data-method="qris">
+                            <i class="fas fa-qrcode"></i> QRIS
+                        </button>
+                        <button class="payment-method" data-method="gopay">
+                            <i class="fab fa-google-pay"></i> Gopay
+                        </button>
+                        <button class="payment-method" data-method="dana">
+                            <i class="fas fa-wallet"></i> DANA
+                        </button>
+                    </div>
+                    
+                    <div class="qr-container" style="display: none;">
+                        <img src="" alt="QR Code" class="qr-code">
+                        <div class="qr-actions">
+                            <!-- Download Button -->
+                            <button class="download-qr-btn">
+                                <i class="fas fa-download"></i> Download QR
+                            </button>
+                            <!-- WhatsApp Confirmation -->
+                            <a href="https://wa.me/6287875962943?text=Saya%20sudah%20melakukan%20pembayaran" 
+                               class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Konfirmasi Pembayaran
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Card 3 -->
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <h3>Design Grafis</h3>
+                <p>Menyediakan design apapun yang kita bikin <span class="slang">aesthetic</span> biar makin pro</p>
+                
+                <button class="order-btn">Order Sekarang</button>
+                
+                <div class="payment-options" style="display: none;">
+                    <h4>Metode Pembayaran:</h4>
+                    <div class="payment-methods">
+                        <button class="payment-method" data-method="qris">
+                            <i class="fas fa-qrcode"></i> QRIS
+                        </button>
+                        <button class="payment-method" data-method="gopay">
+                            <i class="fab fa-google-pay"></i> Gopay
+                        </button>
+                        <button class="payment-method" data-method="dana">
+                            <i class="fas fa-wallet"></i> DANA
+                        </button>
+                    </div>
+                    
+                    <div class="qr-container" style="display: none;">
+                        <img src="" alt="QR Code" class="qr-code">
+                        <div class="qr-actions">
+                            <!-- Download Button -->
+                            <button class="download-qr-btn">
+                                <i class="fas fa-download"></i> Download QR
+                            </button>
+                            <!-- WhatsApp Confirmation -->
+                            <a href="https://wa.me/6287875962943?text=Saya%20sudah%20melakukan%20pembayaran" 
+                               class="whatsapp-btn" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Konfirmasi Pembayaran
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <div class="minigame-container">
+        <div class="reaction-game">
+          <h2 class="game-title">⚡ Seberapa Fasthand ⚡ Anda?</h2>
+          
+          <div id="reaction-start-screen" class="start-screen">
+            <div class="input-group">
+              <input type="text" id="player-name" placeholder="Your name" maxlength="12">
+              <button id="start-btn" class="game-btn">Start Game</button>
+            </div>
+          </div>
+          
+          <div id="reaction-game-area" class="game-area">
+            <div id="reaction-display">Wait for the color change...</div>
+            <div id="reaction-target" class="target"></div>
+            <div class="game-stats">
+              <div class="stat-box">
+                <span class="stat-label">Your Time</span>
+                <span id="current-time" class="stat-value">0</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-label">Best Time</span>
+                <span id="best-time" class="stat-value">0</span>
+              </div>
+            </div>
+          </div>
+          
+          <div id="leaderboard" class="leaderboard">
+            <h3 class="leaderboard-title">🏆 Top Player</h3>
+            <div id="top-player" class="top-player">
+              <div class="player-rank">1</div>
+              <div class="player-name">-</div>
+              <div class="player-time">0ms</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add this inside your <body> -->
+<section id="link">
+<div class="downloads-dashboard">
+    <div class="dashboard-header">
+      <h2>Premium Downloads</h2>
+      <p>Get all formats for your convenience</p>
+    </div>
+    
+    <div class="downloads-grid">
+      <!-- Product Card 1 -->
+      <div class="download-card">
+        <div class="card-header">
+          <span class="card-badge">NEW</span>
+          <img src="https://cdn.freelogovectors.net/wp-content/uploads/2019/02/winrar_logo.png" alt="Product Preview" class="card-preview">
+        </div>
+        <div class="card-body">
+          <h3>Eclipse CPP</h3>
+          <div class="download-options">
+            <a href="#" class="download-btn zip">
+              <i class="fas fa-file-archive"></i> .zip (0 MB)
+            </a>
+            <a href="https://mega.nz/file/sHEQEQYC#KG4uReulwTmjQ8WVXjsQsiKvc33Xisvdh04m2Y8pC-A" 
+            class="download-btn rar" 
+            download="Eclipse CPP.rar">
+           <i class="fas fa-file-archive"></i> .rar (850 MB)
+            </a>
+          </div>
+        </div>
+      </div>
+          <!-- Product Card 2 -->
+      <div class="download-card">
+        <div class="card-header">
+          <span class="card-badge">NEW</span>
+          <img src="https://cdn.freelogovectors.net/wp-content/uploads/2019/02/winrar_logo.png" alt="Product Preview" class="card-preview">
+        </div>
+        <div class="card-body">
+          <h3>Noisy CPP</h3>
+          <div class="download-options">
+            <a href="#" class="download-btn zip">
+              <i class="fas fa-file-archive"></i> .zip (0 MB)
+            </a>
+            <a href="https://mega.nz/file/P3hVSY5B#fN_VBYtaXQ6idjJvg_TaJ7PzwCHjDTkDpVLceWXplgE" 
+            class="download-btn rar" 
+            download="Noisy CPP.rar">
+           <i class="fas fa-file-archive"></i> .rar (1.51 GB)
+            </a>
+          </div>
+        </div>
+      </div>
+        <!-- Product Card 3 -->
+        <div class="download-card">
+            <div class="card-header">
+                <span class="card-badge">NEW</span>
+                <img src="https://cdn.freelogovectors.net/wp-content/uploads/2019/02/winrar_logo.png" alt="Product Preview" class="card-preview">
+            </div>
+            <div class="card-body">
+                <h3>GrowFix CPP</h3>
+                <div class="download-options">
+                <a href="#" class="download-btn zip">
+                    <i class="fas fa-file-archive"></i> .zip (0 MB)
+                </a>
+                <a href="https://mega.nz/file/u6BVRCob#ks-Pw-k9UsdL--dl7HeVC4-XYLK6RYeiYwKgH0p2wv0" 
+                class="download-btn rar" 
+                download="GrowFix CPP.rar">
+                <i class="fas fa-file-archive"></i> .rar (975 MB)
+                </a>
+                </div>
+            </div>
+        </div>        
+    </div>
+  </div>
+  </section>
+
+      <div class="rating-widget">
+        <h3>Rate iLyxx Store</h3>
+        <div class="stars" data-rating="0">
+        <span class="star" data-value="1">☆</span>
+        <span class="star" data-value="2">☆</span>
+        <span class="star" data-value="3">☆</span>
+        <span class="star" data-value="4">☆</span>
+        <span class="star" data-value="5">☆</span>
+        </div>
+        <textarea id="rating-comment" placeholder="Optional feedback..."></textarea>
+        <button id="submit-rating" class="rating-btn">Submit Rating</button>
+        <div class="rating-thank-you" style="display:none;">
+        Thank you for your feedback!
+        </div>
+        <div class="rating-stats">
+        <div class="average-rating">Average: <span id="avg-rating">0</span>/5</div>
+        <div class="total-ratings">From <span id="total-ratings">0</span> customers</div>
+        </div>
+    </div>
+
+    <!-- Kontak -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact <span class="slang">Help</span></h2>
+                <p>Selalu buka 24 jam, fast respon!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Nama *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Email *" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Isi Pesan..." required></textarea>
+                        </div>
+                        <button type="submit" class="primary-btn"><i class="fas fa-paper-plane emoji"></i>Kirim</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>ilyxxstore@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <p>+62 878 7596 2943</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Lokasi</h3>
+                            <p>Depok, Jawa Barat</p>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <a href="#" class="logo">iLyxx<span>Store</span></a>
+                    <p>Spesialis bikin server & design <span class="slang">auto keren</span> buat bisnis lo!</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Tautan Menu</h3>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Layanan</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Project</a></li>
+                        <li><a href="#link"><i class="fas fa-chevron-right"></i> Link</a></li>
+                        <li><a href="#contact"><i class="fas fa-chevron-right"></i> Kontak</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Person</h3>
+                    <p><i class="fas fa-envelope"></i> ilyxxstore@gmail.com</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 878 7596 2943</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 iLyxx Store. <span class="slang">All good in the hood.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6287875962943" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+
+    <script src="script.js"></script></body>
+</html>
