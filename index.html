@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iLyxx Store - Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="icon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="container">
+            <div class="navbar">
+                <a href="#contact" class="logo">iLyxx <span>Store</span></a>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#products"><i class="fas fa-box-open"></i> Services</a></li>
+                    <li><a href="#contact"><i class="fas fa-phone-alt"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="neon-notification">
+        <div class="neon-content">
+            <i class="fas fa-bell"></i>
+            <p>Try AI Chat Bot!</p>
+        </div>
+        <div class="neon-border"></div>
+    </div>
+
+    <!-- <div class="matrix-rain"></div> -->
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>iLyxx Store</h1>
+            <p>Melayani layanan kebutuhan Design dan Membantu memudahkan anda dalam pembuatan Private Server Growtopia</p>
+        </div>
+    </section>
+
+    <div class="ai-chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <div class="ai-pulse"></div>
+                <i class="fas fa-robot"></i>
+            </div>
+            <h4>iLyxx Assistant</h4>
+            <button class="chatbot-close">&times;</button>
+        </div>
+        <div class="chatbot-messages">
+            <div class="message ai-message">
+                <p>Hello! I'm your coding assistant. How can I help you today?</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Ask about our services...">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <button class="chatbot-toggle">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+    
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Services Pricelist</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Coder Service</h3>
+                        <p>- 50k/Week (can trial)</p>
+                        <p>- 100k/Month (can trial)</p>
+                        <div class="payment-method">
+                            <p><i class="fas fa-qrcode"></i> Payment Method:</p>
+                            <button class="payment-btn">Show QRIS</button>
+                            <div class="qris-popup" id="qrisPopup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h4>Scan QRIS Below</h4>
+                                    <img src="qris-payment.png" alt="QRIS Payment" class="qris-img">
+                                    <p>Payment will automatically close in <span id="countdown">60</span> seconds</p>
+                                    <a href="https://wa.me/6287875962943?text=Halo%20iLyxx%20Store,%20saya%20sudah%20melakukan%20pembayaran%20untuk%20layanan%20[Service Name]" class="confirm-btn" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> Confirm Payment
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Fixing Error</h3>
+                        <p>Issue like "Server gave 404", "A download failed" and Get the stuck enter game.</p>
+                        <div class="payment-method">
+                            <p><i class="fas fa-qrcode"></i> Payment Method:</p>
+                            <button class="payment-btn">Show QRIS</button>
+                            <div class="qris-popup" id="qrisPopup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h4>Scan QRIS Below</h4>
+                                    <img src="qris-payment.png" alt="QRIS Payment" class="qris-img">
+                                    <p>Payment will automatically close in <span id="countdown">60</span> seconds</p>
+                                    <a href="https://wa.me/6287875962943?text=Halo%20iLyxx%20Store,%20saya%20sudah%20melakukan%20pembayaran%20untuk%20layanan%20[Service Name]" class="confirm-btn" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> Confirm Payment
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Setup Server GTPS</h3>
+                        <p>- VPS 8GB 4Core + Sao CPP: 110k</p>
+                        <p>- VPS 16GB 4Core + Sao CPP: 120k</p>
+                        <div class="payment-method">
+                            <p><i class="fas fa-qrcode"></i> Payment Method:</p>
+                            <button class="payment-btn">Show QRIS</button>
+                            <div class="qris-popup" id="qrisPopup">
+                                <div class="popup-content">
+                                    <span class="close-popup">&times;</span>
+                                    <h4>Scan QRIS Below</h4>
+                                    <img src="qris-payment.png" alt="QRIS Payment" class="qris-img">
+                                    <p>Payment will automatically close in <span id="countdown">60</span> seconds</p>
+                                    <a href="https://wa.me/6287875962943?text=Halo%20iLyxx%20Store,%20saya%20sudah%20melakukan%20pembayaran%20untuk%20layanan%20[Service Name]" class="confirm-btn" target="_blank">
+                                        <i class="fab fa-whatsapp"></i> Confirm Payment
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="luxury-promo-bar">
+        <div class="luxury-marquee">
+            <div class="promo-content">
+                🔥 <span class="highlight">PROMO SALE</span> ALL PRODUCTS OR SERVICES <span class="discount">50% OFF</span> HANYA DI BULAN APRIL! 🔥
+            </div>
+        </div>
+        <!-- <button class="close-promo">&times;</button> -->
+    </div>
+
+    <section class="tutorial-section">
+        <div class="container">
+          <h2 class="section-title"><i class="fas fa-video"></i> Tutorial Video</h2>
+          <p class="section-subtitle">Pelajari cara menggunakan layanan kami dengan panduan video berikut</p>
+          
+          <div class="video-carousel">
+            <!-- Video 1 -->
+            <div class="video-container active">
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/KjKI4B57dN8?si=p722c2x-_G_gTwhS" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        id="video1"></iframe>
+              </div>
+              <h3>Cara Bermain Growtopia Private Server</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+    <!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonials-grid">
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_ksrS62hVv_9ZCqBstL3BeqVRtbguTtAv12noeDzaWbIXA=s800-c-k-c0x00ffffff-no-rj" alt="Client" class="client-photo">
+                    <div class="client-details">
+                        <h4>PeterW</h4>
+                        <p>Content Creator</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p>"Boleh juga, menarik dan keren layanan nya! (sikma)"</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_n4ZZYB07DwxusEu1SjIEq368IUC2EGn-GZyh4O3O3eiw=s800-c-k-c0x00ffffff-no-rj" alt="Client" class="client-photo">
+                    <div class="client-details">
+                        <h4>RAJA</h4>
+                        <p>Rich Player</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p>"Padahal mau narik saldo buat Jasa Fix, kirain mahal ternyata murah!"</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+                <div class="client-info">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_nxilfsCnVAyEb6__cbEObjv8zjP9jnLGBX2iL6_QxjOg=s800-c-k-c0x00ffffff-no-rj" alt="Client" class="client-photo">
+                    <div class="client-details">
+                        <h4>Papi Riza</h4>
+                        <p>Content Creator</p>
+                    </div>
+                </div>
+                <div class="testimonial-content">
+                    <p>"Yang tadinya aku ngga minat buat bikin server, karna bantuan iLyxx jadi mudah tinggal main!"</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Blog Section -->
+<section class="blog" id="blog">
+    <div class="container">
+        <h2 class="section-title">Blog Articles</h2>
+        <div class="blog-grid">
+            <!-- Article 1 -->
+            <article class="blog-card">
+                <div class="blog-image-container">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                         alt="Coding Best Practices" 
+                         class="blog-image">
+                    <div class="blog-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">Jun</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Coding</span>
+                        <span class="blog-read-time">5 min read</span>
+                    </div>
+                    <h3 class="blog-title">Tips Menulis Clean Code untuk Pemula</h3>
+                    <p class="blog-excerpt">Pelajari teknik dasar menulis kode yang bersih dan mudah dipahami untuk meningkatkan kolaborasi tim...</p>
+                    <a href="#" class="read-more-btn">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Article 2 -->
+            <article class="blog-card">
+                <div class="blog-image-container">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                         alt="Debugging Techniques" 
+                         class="blog-image">
+                    <div class="blog-date">
+                        <span class="date-day">02</span>
+                        <span class="date-month">Jul</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Debugging</span>
+                        <span class="blog-read-time">7 min read</span>
+                    </div>
+                    <h3 class="blog-title">10 Teknik Debugging Efektif</h3>
+                    <p class="blog-excerpt">Temukan metode efektif untuk menemukan dan memperbaiki bug dalam kode Anda dengan lebih cepat...</p>
+                    <a href="#" class="read-more-btn">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+            
+            <!-- Article 3 -->
+            <article class="blog-card">
+                <div class="blog-image-container">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                         alt="Server Setup" 
+                         class="blog-image">
+                    <div class="blog-date">
+                        <span class="date-day">20</span>
+                        <span class="date-month">Jul</span>
+                    </div>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="blog-category">Setup</span>
+                        <span class="blog-read-time">8 min read</span>
+                    </div>
+                    <h3 class="blog-title">Panduan Setup Server untuk Aplikasi Web</h3>
+                    <p class="blog-excerpt">Langkah-langkah lengkap mengkonfigurasi server untuk aplikasi web modern dengan performa optimal...</p>
+                    <a href="#" class="read-more-btn">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+        
+        <div class="blog-cta">
+            <a href="#" class="view-all-btn">
+                View All Articles <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>iLyxx Store is your destination for GTPS (Growtopia Private Server) services. We specialize in providing high-quality tools and services to enhance your GTPS experience.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <a href="https://wa.me/6287875962943" target="_blank"><i class="fab fa-whatsapp"></i> +62 878-7596-2943</a>
+                    <a href="https://instagram.com/aelvyou" target="_blank"><i class="fab fa-instagram"></i> @aelvyou</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="https://instagram.com/aelvyou" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/6287875962943" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 iLyxx Store. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ext-language_tools.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
